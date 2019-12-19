@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>線上訂餐</title>
+<link rel="stylesheet" href="styles/css.css"/>
+<link rel="stylesheet" href="styles/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
+<script src="1.js"></script>
+
+</head>
+<body>
+<input type="button" onclick="a()" value="onclick">
+<div id="demo">
+<form name="form1">
+    <p class="font1"style="margin-left:500px;margin-top:20px">取餐時間:<input type="date" required id="time" name="time" style="width:220px;">
+        <select id="ti" name="s1" required style="font-size:25px;color:gray;height:43px;width:140px;margin-left:-10px"></select></p><br> 
+</form>
+
+</div>
+	<script>
+function a(){
+var dt = new Date();
+var month = new Array(12);
+var day = new Array(31);
+var hour = new Array(24);
+var min = new Array(60);
+var a =0;
+var abc=new Array('09:00','09:05','09:10','09:15','09:20','09:25','09:30','09:35','09:40','09:45','09:50','09:55',
+'10:00','10:05','10:10','10:15','10:20','10:25','10:30','10:35','10:40','10:45','10:50','10:55'
+,'11:00','11:05','11:10','11:15','11:20','11:25','11:30','11:35','11:40','11:45','11:50','11:55'
+,'12:00','12:05','12:10','12:15','12:20','12:25','12:30','12:35','12:40','12:45','12:50','12:55'
+,'13:00','13:05','13:10','13:15','13:20','13:25','13:30','13:35','13:40','13:45','13:50','13:55'
+,'14:00','14:05','14:10','14:15','14:20','14:25','14:30','14:35','14:40','14:45','14:50','14:55'
+,'15:00','15:05','15:10','15:15','15:20','15:25','15:30','15:35','15:40','15:45','15:50','15:55'
+,'16:00','16:05','16:10','16:15','16:20','16:25','16:30','16:35','16:40','16:45','16:50','16:55'
+,'17:00','17:05','17:10','17:15','17:20','17:25','17:30','17:35','17:40','17:45','17:50','17:55'
+,'18:00','18:05','18:10','18:15','18:20','18:25','18:30','18:35','18:40','18:45','18:50','18:55'
+,'19:00','19:05','19:10','19:15','19:20','19:25','19:30','19:35','19:40','19:45','19:50','19:55'
+,'20:00','20:05','20:10','20:15','20:20','20:25','20:30','20:35','20:40','20:45','20:50','20:55'
+,'21:00','21:05','21:10','21:15','21:20','21:25','21:30','21:35','21:40','21:45','21:50','21:55'
+,'22:00','22:05','22:10','22:15','22:20','22:25','22:30','22:35','22:40','22:45','22:50','22:55'
+)
+if(dt.getMinutes()<15 && dt.getMinutes()>=0)//0-14
+{ 
+form=document.form1;
+a=dt.getHours()+":"+'45';
+var aa =abc.indexOf(a);
+var b=0;
+for(i=aa;i<abc.length;i++){
+    form.ti.options[b]=new Option(abc[i]);
+    b=b+1;
+ }
+
+}
+if(dt.getMinutes()<30 && dt.getMinutes()>=15)//15-29
+{ 
+form=document.form1;
+a=dt.getHours()+1+":"+'00';
+var aa =abc.indexOf(a);
+var b=0;
+for(i=aa;i<abc.length;i++){
+    form.ti.options[b]=new Option(abc[i]);
+    b=b+1;
+ }
+
+}
+
+if(dt.getMinutes()<60 && dt.getMinutes()>=30)//30-44
+{ /*
+form=document.form1;
+a=dt.getHours()+1+":"+'15';
+var aa =abc.indexOf(a);
+var b=0;
+for(i=aa;i<abc.length;i++){
+    form.ti.options[b]=new Option(abc[i]);
+    b=b+1;*/
+
+    document.write(String(dt.getFullYear())+String(dt.getMonth()+1)+String(dt.getDate()));
+ }
+
+if(dt.getMinutes()<60 && dt.getMinutes()>=45)//45-59
+{ 
+form=document.form1;
+a=dt.getHours()+1+":"+'30';
+var aa =abc.indexOf(a);
+var b=0;
+for(i=aa;i<abc.length;i++){
+    form.ti.options[b]=new Option(abc[i]);
+    b=b+1;
+ }
+}
+}
+</script>
+<p class="font1" style="margin-left:500px;margin-top:20px">姓&nbsp&nbsp&nbsp&nbsp名:<input type="text"  name="username" size="30" placeholder="姓名" required style="width:360px"></p><br>
+	<p class="font1"style="margin-left:500px;margin-top:20px">電&nbsp&nbsp&nbsp&nbsp話:<input type="tel" pattern="(\d{4}-\d{6})" placeholder="行動電話號碼" title="例:0987-654321" name="usertel" size="30"style="width:360px"></p><br>
+	<p class="font1"style="margin-left:500px;margin-top:20px">電子郵件:<input type="email" name="usermail"  placeholder="電子郵件" style="width:360px"></p><br>
+	<div id="demo" ><p class="font1"style="margin-left:500px;margin-top:20px">外送地址:<select name="column1" id="column1" size=1 onclick="onChangeColumn1()"		
+	style="font-size:25px;font-family: Microsoft JhengHei ;letter-spacing:10px;width:105px";>
+	
+	</body>
+    </html>

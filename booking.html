@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>線上訂餐</title>
+<link rel="stylesheet" href="styles/css.css"/>
+<link rel="stylesheet" href="styles/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
+<script src="1.js"></script>
+
+</head>
+<body>
+	<div>
+			
+		<div id="header">
+			<img src="images/logo.png "   style="relative;width:30%; height:100%;float:right; " />
+			<a href="index.html" style ="position: relative; bottom: 0; left: 10px; top: 26px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
+		
+			<a href="product.html" style="position: relative; bottom: 0; left: 29px; top: 26px; font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
+		
+			<a href="booking.html" style="position: relative; bottom: 0; left: 48px; top: 26px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
+		</div>
+
+
+<div id="mid">
+<form name="theForm" method="post" action="booking.php">
+<fieldset>
+	<legend><p class="font" style="margin:4em 0 0 21em ">請輸入訂購資料</p></legend>
+	<div class="font1" >
+	<p class="font1" style="margin-left:600px;margin-top:30px">取餐方式:
+<input type="radio" onclick="delivery()" name="takeway"  value="delivery"required>外送
+	<input type="radio" onclick="takeout()" name="takeway" value="takeout">外帶</div><br>
+	<p class="font1"style="margin-left:500px;margin-top:20px">取餐時間:<input type="date" required id="time" name="time" style="width:220px;">
+	<select id="ti" name="ti" required style="font-size:25px;color:gray;height:43px;width:140px;margin-left:-10px"></select></p><br> 
+	<script>
+	
+var dt = new Date();
+var month = new Array(12);
+var day = new Array(31);
+var hour = new Array(24);
+var min = new Array(60);
+
+day[0]="01",day[1]="02",day[2]="03",day[3]="04",day[4]="05",day[5]="06";day[6]="07",day[7]="08",day[8]="09",day[9]="10",day[10]="11",
+day[11]="12",day[12]="13",day[13]="14",day[14]="15",day[15]="16",day[16]="17",day[17]="18",day[18]="19",day[19]="20",day[20]="21",
+day[21]="22",day[22]="23",day[23]="24",day[24]="25",day[25]="26",day[26]="27",day[27]="28",day[28]="29",day[29]="30",day[30]="31";
+month[0] = "01",month[1] = "02",month[2] = "03",month[3] = "04",month[4] = "05",month[5] = "06",
+month[6] = "07",month[7] = "08",month[8] = "09",month[9] = "10",month[10] = "11",month[11] = "12";
+hour[0]="01",hour[1]="02",hour[2]="03",hour[3]="04",hour[4]="05",hour[5]="06";hour[6]="07",hour[7]="08",hour[8]="09",hour[9]="10",hour[10]="11",
+hour[11]="12",hour[12]="13",hour[13]="14",hour[14]="15",hour[15]="16",hour[16]="17",hour[17]="18",hour[18]="19",hour[19]="20",hour[20]="21",
+hour[21]="22",hour[22]="23",hour[23]="00";
+min[0]="01",min[1]="02",min[2]="03",min[3]="04",min[4]="05",min[5]="06";min[6]="07",min[7]="08",min[8]="09",min[9]="10",min[10]="11",
+min[11]="12",min[12]="13",min[13]="14",min[14]="15",min[15]="16",min[16]="17",min[17]="18",min[18]="19",min[19]="20",min[20]="21",
+min[21]="22",min[22]="23",min[23]="24",min[24]="25",min[25]="26",min[26]="27",min[27]="28",min[28]="29",min[29]="30",min[30]="31";
+min[31]="32",min[32]="33",min[33]="34",min[34]="35",min[35]="36",min[36]="37";min[37]="38",min[38]="39",min[39]="40",min[40]="41",min[41]="42",
+min[42]="43",min[43]="44",min[44]="45",min[45]="46",min[46]="47",min[47]="48",min[48]="49",min[49]="50",min[50]="51",min[51]="52",
+min[52]="53",min[53]="54",min[54]="55",min[55]="56",min[56]="57",min[57]="58",min[58]="59",min[59]="00"
+if ( month[dt.getMonth()] == 1  ||  month[dt.getMonth()] == 3  ||  month[dt.getMonth()] == 5  ||  month[dt.getMonth()] == 7  ||
+ month[dt.getMonth()] == 8  ||  month[dt.getMonth()] == 10  ||  month[dt.getMonth()] == 12  && dt.getDate()+5>31)
+{
+ document.getElementById("time").min =(dt.getFullYear()+ "-"+ ( month[dt.getMonth()]) + "-" + dt.getDate());
+document.getElementById("time").max =(dt.getFullYear()+ "-" + ( month[dt.getMonth()+1]) + "-" + day[dt.getDate()+4-31]);
+}
+if ( month[dt.getMonth()] == 2  ||  month[dt.getMonth()] == 4  ||  month[dt.getMonth()] == 6  ||  month[dt.getMonth()] == 9  ||
+ month[dt.getMonth()] == 11  && dt.getDate()+5>30)
+ {
+document.getElementById("time").min =(dt.getFullYear()+ "-" + ( month[dt.getMonth()]) + "-" + dt.getDate());
+document.getElementById("time").max =(dt.getFullYear()+ "-" + ( month[dt.getMonth()+1]) + "-" + day[dt.getDate()+4-30]); 
+}
+if (dt.getDate()+5<31)
+ {
+document.getElementById("time").min =(dt.getFullYear()+ "-" + ( month[dt.getMonth()]) + "-" + dt.getDate());
+document.getElementById("time").max =(dt.getFullYear()+ "-" + ( month[dt.getMonth()]) + "-" + day[dt.getDate()+4]); //設定日期只能在五天內訂購
+ }
+else if(dt.getDate()+5>31){
+ {
+ document.getElementById("time").min =(dt.getFullYear()+ "-" + ( month[dt.getMonth()]) + "-" + dt.getDate());
+document.getElementById("time").max =(dt.getFullYear()+ "-" + ( month[dt.getMonth()+1]) + "-" + day[dt.getDate()-31]); //設定日期只能在五天內訂購
+ }
+}
+ 
+if (dt.getMinutes()+15 > 60) //31-60
+{
+document.getElementById("ti").options[3]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1-15]);
+}
+else if(dt.getMinutes()+15 < 60) //0-29
+{
+document.getElementById("ti").options[3]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1+15]);
+}
+else //30
+{
+document.getElementById("ti").options[3]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1+15]);
+}
+if (dt.getMinutes()+30 > 60) //31-60
+{
+document.getElementById("ti").options[0]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1-30]);
+document.getElementById("ti").options[4]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1-30]);
+
+}
+else if(dt.getMinutes()+30 < 60) //0-29
+{
+document.getElementById("ti").options[0]=new Option(hour[dt.getHours()-1]+":"+min[dt.getMinutes()-1+30]);
+document.getElementById("ti").options[4]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1+30]);
+}
+else //30
+{
+document.getElementById("ti").options[0]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1+30]);
+document.getElementById("ti").options[4]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1+30]);
+}
+if (dt.getMinutes()+45 >60) //16-60
+{
+document.getElementById("ti").options[1]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1-15]);
+document.getElementById("ti").options[5]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1-15]);
+}
+else if(dt.getMinutes()+45 < 60) // 1-14
+{
+document.getElementById("ti").options[1]=new Option(hour[dt.getHours()-1]+":"+min[dt.getMinutes()-1+45]);
+document.getElementById("ti").options[5]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1+45]);
+
+}
+else //15
+{
+document.getElementById("ti").options[1]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1+45]);
+document.getElementById("ti").options[5]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1+45]);
+
+}
+if (dt.getMinutes()+60 >60) //1-60
+{
+document.getElementById("ti").options[2]=new Option(hour[dt.getHours()]+":"+min[dt.getMinutes()-1]);
+document.getElementById("ti").options[6]=new Option(hour[dt.getHours()+1]+":"+min[dt.getMinutes()-1]);
+
+}
+else //0
+{
+document.getElementById("ti").options[2]=new Option(hour[dt.getHours()]+":"+"00");
+document.getElementById("ti").options[6]=new Option(hour[dt.getHours()+1]+":"+"00"); //設定訂購時間只能在半小時以上取餐
+}
+function node(name, child){
+	this.name=name;
+	this.child=child;
+}
+
+function delivery(){
+	document.getElementById('demo').style.display="block";
+	document.getElementById('column1').required=true;
+	document.getElementById('column2').required=true;
+	document.getElementById('column3').required=true;
+	document.getElementById('address').required=true;
+}
+
+function takeout(){
+	document.getElementById('demo').style.display="none";
+	document.getElementById('column1').required=false;
+	document.getElementById('column2').required=false;
+	document.getElementById('column3').required=false;
+	document.getElementById('address').required=false;
+
+} 
+
+function dataHierarchy(){
+	// 地區
+	var area=new Array();
+	var i=0;
+	area[i++]=new node("", [""]);
+	area[i++]=new node("北區", ["中清路三段", "文心路四段", "北平路","天津路"]);
+	
+	// 縣市
+	var output=new Array();
+	var i=0;
+	output[i++]=new node("", );
+	output[i++]=new node("台中市", area);
+
+
+	return(output);
+}
+dataTree=dataHierarchy();
+
+// 第三個欄位被更動後的反應動作
+function onChangeColumn3(){
+	updatePath();
+}
+
+// 第二個欄位被更動後的反應動作
+function onChangeColumn2(){
+	form=document.theForm;
+	index1=form.column1.selectedIndex;
+	index2=form.column2.selectedIndex;
+	index3=form.column3.selectedIndex;
+	// Create options for column 3
+	for (i=0;i<dataTree[index1].child[index2].child.length;i++)
+		form.column3.options[i]=new Option(dataTree[index1].child[index2].child[i], dataTree[index1].child[index2].child[i]);
+	form.column3.options.length=dataTree[index1].child[index2].child.length;
+	updatePath();
+}
+
+// 第一個欄位被更動後的反應動作
+function onChangeColumn1() {
+	form=document.theForm;
+	index1=form.column1.selectedIndex;
+	index2=form.column2.selectedIndex;
+	index3=form.column3.selectedIndex;
+	// Create options for column 2
+	for (i=0;i<dataTree[index1].child.length;i++)
+		form.column2.options[i]=new Option(dataTree[index1].child[i].name, dataTree[index1].child[i].name);
+	form.column2.options.length=dataTree[index1].child.length;
+	// Clear column 3
+	form.column3.options.length=0;
+	updatePath();
+}
+
+// 修改所顯示的路徑
+function updatePath(){
+	form=document.theForm;
+	index1=form.column1.selectedIndex;
+	index2=form.column2.selectedIndex;
+	index3=form.column3.selectedIndex;
+	if ((index1>=0) && (index2>=0) && (index3>=0)) {
+		text1=form.column1.options[index1].text;
+		text2=form.column2.options[index2].text;
+		text3=form.column3.options[index3].text;
+		form.path.value=text1+text2+text3;
+	} else
+		form.path.value="";
+		
+		
+}
+
+</script>
+<p class="font1" style="margin-left:500px;margin-top:20px">姓&nbsp&nbsp&nbsp&nbsp名:<input type="text"  name="username" size="30" placeholder="姓名" required style="width:360px"></p><br>
+	<p class="font1"style="margin-left:500px;margin-top:20px">電&nbsp&nbsp&nbsp&nbsp話:<input type="tel" pattern="(\d{4}-\d{6})" placeholder="行動電話號碼" title="例:0987-654321" name="usertel" size="30"style="width:360px"></p><br>
+	<p class="font1"style="margin-left:500px;margin-top:20px">電子郵件:<input type="email" name="usermail"  placeholder="電子郵件" style="width:360px"></p><br>
+	<div id="demo" ><p class="font1"style="margin-left:500px;margin-top:20px">外送地址:<select name="column1" id="column1" size=1 onclick="onChangeColumn1()"		
+	style="font-size:25px;font-family: Microsoft JhengHei ;letter-spacing:10px;width:105px";>
+	
+	<script>
+	for (i=0; i<dataTree.length; i++)
+					document.writeln("<option value=\""+dataTree[i].name+"\">"+dataTree[i].name);
+				</script>
+			</select>
+			<select name="column2" id="column2" size=1 onclick="onChangeColumn2()" 			
+			style="margin-left:-10px;font-size:25px;font-family: Microsoft JhengHei ;width:80px;margin-left:-10px"; >
+			</select>
+			<select name="column3" id="column3" size=1 onclick="onChangeColumn3()" 
+			style="width:165px;margin-left:-10px;font-size:25px;font-family: Microsoft JhengHei "; >
+			</select>
+	<input type="hidden" name="path"></p><br>
+	<input type="text" id="address" name="address"placeholder="外送地址"  style="width:360px;margin-left:26em;margin-top:20px;font-size:25px" ></div>
+<input type="submit" class="font" style="margin:29px 0 0.5em 710px" value="訂購"></p>
+	</fieldset>
+	</form>
+	</div>
+	<div id="Footer">
+			<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
+			<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
+				</div>
+</div>
+	</body>
+	</html>

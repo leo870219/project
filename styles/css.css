@@ -1,0 +1,407 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width:2000px;
+  margin: 2em auto;
+  font-family: Raleway, Arial, sans-serif;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #eee;
+    padding: 0;
+}
+
+h1, h2 {
+  margin-bottom: 1em;
+  border-bottom: 2px solid #eee;
+  line-height: 1.5;
+}
+
+h1 > small{
+  color: #666;
+}
+
+h1 > small > a,
+p > a{
+  color: #3CB371;
+  text-decoration: none;
+}
+h1 > small > a:hover,
+p > a:hover{
+  text-decoration: underline;
+}
+
+/* Buttons styles */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="submit"].btn,
+button.btn {
+	cursor: pointer;
+}
+
+a.btn,.btn {
+   margin-right: 1em; /* remove this while use*/
+	display: inline-block;
+	outline: none;
+	*zoom: 1;
+	text-align: center;
+	text-decoration: none;
+	font-family: inherit;
+	font-weight: 300;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	border: 1px solid;
+	transition: all 0.2s ease;
+	box-sizing: border-box;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+}
+/* Radius */
+.btn-radius {
+  border-radius: 3px;
+}
+/* Sizes */
+.btn-small {
+	font-size: 0.8125em;
+	padding: 0.4125em 1.25em;
+}
+.btn-medium {
+	font-size: 0.9375em;
+	padding: 0.5375em 1.375em;
+}
+.btn-large {
+	font-size: 1.0625em;
+	padding: 0.5625em 1.5em;
+}
+
+/* Colors */
+.btn-green {
+	color: #3CB371;
+	border-color: #3CB371;
+}
+.btn-green:hover {
+  background: #3CB371;
+  color: #fff;
+  border-color: #3CB371;		
+}
+
+.btn-blue {
+	color: #4682B4;
+	border-color: #4682B4;
+}
+.btn-blue:hover {
+  background: #4682B4;
+  color: #fff;
+  border-color: #4682B4;		
+}
+
+.btn-orange {
+	color: #FF8C00;
+	border-color: #FF8C00;
+}
+.btn-orange:hover {
+  background: #FF8C00;
+  color: #fff;
+  border-color: #FF8C00;
+  		
+}
+
+.btn-red {
+	color: #B22222;
+	border-color: #B22222;
+}
+.btn-red:hover {
+  background: #B22222;
+  color: #fff;
+  border-color: #B22222;	
+}
+
+.btn-maroon {
+	color: #800000;
+	border-color: #800000;
+}
+.btn-maroon:hover {
+  background: #800000;
+  color: #fff;
+  border-color: #800000;	
+}
+
+
+.btn-fuchsia {
+	color: #FF00FF;
+	border-color: #FF00FF;
+}
+.btn-fuchsia:hover {
+  background: #FF00FF;
+  color: #fff;
+  border-color: #FF00FF;	
+}
+
+.btn-indigo {
+	color: #4B0082;
+	border-color: #4B0082;
+}
+
+.btn-indigo:hover {
+  background: #4B0082;
+  color: #fff;
+  border-color: #4B0082;	
+}
+
+.btn-saddlebrown {
+	color:#8B4513;
+	border-color: #8B4513;
+}
+
+.btn-saddlebrown:hover {
+  background:#8B4513;
+  color: #fff;
+  border-color: #8B4513;	
+}
+
+.btn-chocolate {
+	color: #D2691E;
+	border-color: #D2691E;
+}
+
+.btn-chocolate:hover {
+  background: #D2691E;
+  color: #fff;
+  border-color: #D2691E;	
+}
+
+.btn-gold {
+	color:	#FFD700;
+	border-color: 	#FFD700;
+}
+
+.btn-gold:hover {
+  background:	#FFD700;
+  color: #fff;
+  border-color: 	#FFD700;	
+}
+
+.btn-darkolivegreen {
+	color: #556B2F;
+	border-color:#556B2F;
+}
+
+.btn-darkolivegreen:hover {
+  background: #556B2F;
+  color: #fff;
+  border-color:#556B2F;	
+}
+
+.btn-royalblue {
+	color: #4169E1;
+	border-color: #4169E1;
+}
+
+.btn-royalblue:hover {
+  background: #4169E1;
+  color: #fff;
+  border-color: #4169E1;	
+}
+
+.box {
+	margin-top:2.5em;
+	margin-bottom:5em;
+	margin-left:13em;
+	margin-right:13em;
+}
+
+
+.pic{
+	width:300px;
+	height:250px;
+}
+.pic1{
+	width:100px;
+	height:50px;
+}
+.relative {
+  border-radius:10px;
+  position: relative;
+  left: 50%;
+  font-size:30px;
+  font-family: cwTeXYen,sans-serif ;
+  letter-spacing:10px ;
+  color:white;
+  background-color:#405446
+}
+.relative1 {
+  border-radius:5px;
+  position: absolute;
+  top: 285px;
+  left:250px;
+  font-size:20px;
+  font-family: cwTeXYen,sans-serif ;
+  letter-spacing:5px ;
+  color:white;
+  background-color:#405446
+}
+.relative3 {	
+  width:100%;
+  text-align:center;
+  position: relative;
+  margin-top:20px;
+  font-size:15px;
+  font-family: cwTeXYen,sans-serif ;
+  color:white;
+  background-color:#405446
+}
+.font{
+	border-radius:10px;
+	font-size:30px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:10px ;
+}
+.font1{
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:10px ;
+}
+.font2{
+	border-radius:10px;
+	font-size:30px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:10px ;
+}
+.font3{
+	font-size:20px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:5px ;
+	color:block;
+}
+.font4{
+	font-size:20px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:20px ;
+	color:white;
+	
+}
+.font5{
+	font-size:18px;
+	font-family: cwTeXYen,sans-serif ;
+	color:black;
+	letter-spacing:5px ;
+	margin-left:-10px;
+}
+.font6{
+	width:5em;
+	border-radius:10px;
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:5px ;
+	position:absolute;
+	right:20px;		/*div id go中的下拉式選單*/
+}
+.font7{
+	border-radius:10px;
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:5px ;
+	color:white ;
+	margin-left:20px; 	/*div id go中的文字*/
+}
+.font8{
+	border-radius:10px;
+	font-size:40px;
+	font-family:  cwTeXYen,sans-serif ;
+	text-align:center;
+	letter-spacing:10px ;
+	color:block;
+}
+.font9{
+	border-radius:10px;
+	font-size:30px;
+	font-family: cwTeXYen,sans-serif ;
+	text-align:center;
+	letter-spacing:10px ;
+	color:block;
+}
+.font10{
+	border-radius:10px;
+	font-size:15px;
+	font-family: cwTeXYen,sans-serif ;
+	text-align:center;
+	letter-spacing:10px ;
+	color:block;
+}
+.font11{
+	font-size:25px;
+	font-family:cwTeXYen,sans-serif;
+	margin:1em 0 1em 0;
+	color:block;
+	width:1050px;
+}
+
+#header{
+height:120px;
+background-color:#405446 ;border-style:solid;
+border-color:black;
+border-width:1px;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  
+}
+
+.grid-container > div {
+  
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+
+#body{
+width:75%;
+float:left;
+}
+#Footer{
+	clear: both;
+background-color:#405446 ;
+}
+#side1{
+	float:right;
+	width:25%;
+	
+}
+.content{
+	margin:0 15em ;
+	width:70%;
+}
+
+.okok{
+	outline:none;
+	border:none;
+	float:right;
+	text-align:right;
+}
+
+
+
+
+
