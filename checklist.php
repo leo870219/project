@@ -78,7 +78,7 @@ $f=$_POST['f'];
 $g=$_POST['g'];
 echo "<div>";
 echo "<table id='a' class='table' border='0'>";
-    echo "<tr  style='background-color:black ;font-family:cwTeXYen,sans-serif;color:white;font-size:25px'>";
+    echo "<tr style='background-color:black ;font-family:cwTeXYen,sans-serif;color:white;font-size:25px'>";
     echo"<td colspan='2' style='text-align:center'>餐點名稱</td>";
     echo"<td style=\"text-align:center\">飯量</td>";
     echo"<td style=\"text-align:center\">滷汁</td>";
@@ -91,14 +91,14 @@ for($i=0;$i<count($_POST['a']);$i++){
     
     echo"<tr style=\"font-family:cwTeXYen,sans-serif;font-size:25px\">";
     echo"<td style=\"width:200px\"><img src=\"images/1.jpg\" style=\"width:200px; height:175px;\"></td> ";
-    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"a[]\"value=".($_POST['a'][$i])."></td>";
-    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"b[]\"value=".($_POST['b'][$i])."></td>";
+    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;outline:none;border:none\" readonly=\"readonly\" name=\"a[]\"value=".($_POST['a'][$i])."></td>";
+    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;text-align:center;outline:none;border:none\" readonly=\"readonly\" name=\"b[]\"value=".($_POST['b'][$i])."></td>";
     
-    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"c[]\"value=".($_POST['c'][$i])."></td>";
-    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"d[]\"value=".($_POST['d'][$i])."></td>";
-    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"e[]\"value=".($_POST['e'][$i])."></td>";
-    echo"<td style=\"width:110px;text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"f[]\"value=".($_POST['f'][$i])."></td>";
-    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"g[]\"value=".($_POST['g'][$i])."></td>";
+    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;text-align:center;outline:none;border:none\" readonly=\"readonly\" name=\"c[]\"value=".($_POST['c'][$i])."></td>";
+    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;text-align:center;outline:none;border:none\" readonly=\"readonly\" name=\"d[]\"value=".($_POST['d'][$i])."></td>";
+    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;text-align:center;outline:none;border:none\" readonly=\"readonly\" name=\"e[]\"value=".($_POST['e'][$i])."></td>";
+    echo"<td style=\"width:110px;text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;text-align:center;outline:none;border:none\" readonly=\"readonly\" name=\"f[]\"value=".($_POST['f'][$i])."></td>";
+    echo"<td style=\"text-align:center; line-height:170px\"><input type=\"text\" style=\"width:90px;text-align:center;outline:none;border:none\" readonly=\"readonly\" name=\"g[]\"value=".($_POST['g'][$i])."></td>";
     echo"</tr>";
 
 }
