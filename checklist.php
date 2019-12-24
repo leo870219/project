@@ -12,13 +12,13 @@
 <body>
     <div>
 	<div id="header">
-				<img src="images/logo.png "   style="width:30%; height:100px;float:right; " />
-				<a href="index.html" style ="position: absolute; bottom: 0; left:20px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
-			
-				<a href="product.html" style="position: absolute; bottom: 0; left: 180px; top: 35px; font-size: 35px;  height: 45px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
-			
-				<a href="booking.html" style="position: absolute; bottom: 0; left: 340px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
-			</div>
+		<img src="images/logo.png "   style="width:30%; height:100%;float:right; " />
+		<a href="index.html" style ="position: relative; bottom: 0; left: 10px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
+	
+		<a href="product.html" style="position: relative; bottom: 0; left: 30px; top: 35px; font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
+	
+		<a href="booking.html" style="position: relative; bottom: 0; left: 50px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
+	</div>
 <?php
 $takeway=$_POST["takeway"];
 $time=$_POST["time"];
