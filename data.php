@@ -10,10 +10,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>學生資料管理系統</title>
+<title>龍品訂單管理系統</title>
 </head>
 <body>
-<h1 align="center">訂單資料管理系統</h1>
+<h1 align="center">龍品訂單管理系統</h1>
 <p align="center">目前資料筆數：<?php echo $total_records;?>，<a href="add.php">新增訂單</a>。</p>
 <table border="1" align="center">
   <!-- 表格表頭 -->
