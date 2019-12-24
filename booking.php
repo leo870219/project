@@ -2,6 +2,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <title>線上訂餐</title>
 <link rel="stylesheet" href="styles/css.css" media="screen" type="text/css" />
 <link rel="stylesheet" href="styles/w3.css">
@@ -21,8 +26,8 @@
 				<a href="booking.html" style="position: relative; bottom: 0; left: 50px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
 			</div>
 	<div id="body">
-<div id="go" style="height:580px;width:700px; visibility:hidden; background-color:green;position:fixed;top:8em;left:28em ;border:1px solid #CCC;border:1px solid #333;padding:5px;border-radius:10px;">
-<p class="font7">您選擇的餐點:<input type="text" style="outline:none;border:none;background-color:green;color:white" readonly="readonly" id="add" name="add"></br></br>
+<div id="go" style="height:580px;width:700px; visibility:hidden; background-color:#405446;position:fixed;top:8em;left:28em ;border:1px solid #CCC;border:1px solid #333;padding:5px;border-radius:10px;">
+<p class="font7">您選擇的餐點:<input type="text" style="outline:none;border:none;background-color:#405446;color:white" readonly="readonly" id="add" name="add"></br></br>
 飯量<select id="add1" name="add1" size="1" class="font6"><option value="正常">正常<option value="飯多">飯多<option value="飯少">飯少</select></br></br>
 滷汁<select id="add2" name="add2" size="1" class="font6"><option value="正常">正常<option value="不汁">不汁<option value="汁少">汁少<option value="汁多">汁多<option value="只汁">只汁<option value="只滷肉">只滷肉</select></br></br>
 加料<select id="add3" name="add3" size="1" class="font6"><option value="不加">不加 <option value="加蛋">加蛋</select></br></br>
