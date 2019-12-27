@@ -7,55 +7,92 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<title>龍品快餐店</title>
+<title>產品介紹</title>
 <link rel="stylesheet" href="styles\css.css" media="screen" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand/logo -->
-        <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" class="img-fluid" alt="logo" width="200" height="50">
-        </a>
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;">關於龍品</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;">產品介紹</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;">線上訂餐</a>
-          </li>
-        </ul>
-      </nav>
-        <img src="images\13.jpg"  alt="龍品快餐店"  style="margin-bottom:0" width="100%" height="500">
-<div style="height:500px">
-</div>
-<span style="position: absolute; bottom: 0; left: 550px; top: 300px; font-size: 80px; height: 80px;text-shadow: 0px 0px 6px rgba(255,255,255,0.7);font-family:Microsoft JhengHei"><b>關於龍品</b></span> 
-<div style="margin:5em 17em;">
-	<p style="font-size: 35px;font-family:cwTeXYen,sans-serif;">歷史：</br></br>
-	創始店名為“龍品魚丸店”，創立於民國八十三年，在台中已好幾家分店的龍品</br></br>
-	魚丸店，而且在網路上相當高名氣與好評，不少部落客和網友都直稱這家是台</br></br>
-	中便當界美食，且經常店門口都會排上一場串人龍，就能知道民眾的受歡迎程</br></br>
-	度。龍品快餐店則是加盟店，但與創始店龍品魚丸店有所不同，快餐店雖為加</br></br>
-	盟店，但經營方式以及食材的烹煮都是老闆與老闆娘自行烹調，僅與魚丸店拿</br></br>
-	取蝦漿的食材原料，因此取龍品之名。</br></br></br></br>
-	
-	理念：</br></br>
-	遵循古法、口味道地、食材保證新鮮～</br></br>
-	－讓您 吃的更安心－</br></br>
-	服務用心～  </br></br>
-	－您的滿意，就是我們追求的信念－
-
-</div>
-<div id="Footer">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Style the content */
+  .content {
+    background-color: #ddd;
+    padding: 10px;
+    height: 200px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+    <nav class="navbar navbar-expand-sm" style="background-color: #2d7a44;">
+    <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:65px">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
+      </li>
+    </ul>
+  </nav>   
+  </div>
+  
+  <div class="container-fluid">
+    <form class="form-inline" action="/action_page.php">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" placeholder="Enter email" id="email">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+  <div class="footer" style="background-color: #2d7a44;">
 		<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
 		<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
-			</div>
-
-</body>
-</html>
+  </div>
+  
+  </body>
+  </html>
+  
