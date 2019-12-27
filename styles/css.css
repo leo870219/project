@@ -59,7 +59,7 @@ button.btn {
 }
 
 a.btn,.btn {
-   margin-right: 1em; /* remove this while use*/
+   margin-right: 1em;
 	display: inline-block;
 	outline: none;
 	*zoom: 1;
@@ -73,6 +73,7 @@ a.btn,.btn {
 	transition: all 0.2s ease;
 	box-sizing: border-box;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+	
 }
 /* Radius */
 .btn-radius {
@@ -84,7 +85,7 @@ a.btn,.btn {
 	padding: 0.4125em 1.25em;
 }
 .btn-medium {
-	font-size: 0.9375em;
+	font-size: 20px;
 	padding: 0.5375em 1.375em;
 }
 .btn-large {
@@ -221,14 +222,6 @@ a.btn,.btn {
   border-color: #4169E1;	
 }
 
-.box {
-	margin-top:2.5em;
-	margin-bottom:5em;
-	margin-left:13em;
-	margin-right:13em;
-}
-
-
 .pic{
 	width:300px;
 	height:250px;
@@ -337,6 +330,7 @@ a.btn,.btn {
 	text-align:center;
 	letter-spacing:10px ;
 	color:block;
+	line-height: 70px;
 }
 .font10{
 	border-radius:10px;
@@ -381,7 +375,7 @@ width:75%;
 float:left;
 }
 #Footer{
-	clear: both;
+
 background-color:#405446 ;
 }
 #side1{
@@ -400,8 +394,6 @@ background-color:#405446 ;
 	float:right;
 	text-align:right;
 }
-
-
 
 
 
