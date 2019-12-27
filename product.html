@@ -10,100 +10,110 @@
 <title>產品介紹</title>
 <link rel="stylesheet" href="styles\css.css" media="screen" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-	<div>
-			<div id="header">
-				<img src="images/logo.png "   style="width:30%; height:100%;float:right; " />
-				<a href="index.html" style ="position: relative; bottom: 0; left: 10px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
-			
-				<a href="product.html" style="position: relative; bottom: 0; left: 30px; top: 35px; font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
-			
-				<a href="booking.html" style="position: relative; bottom: 0; left: 50px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
-			</div>
-<div style="height:500px">
-<img style="width:100%; height:100%; border-style:solid; border-color:black; border-width:2px;" src="images\13.jpg" alt="龍品快餐店" >
-</div>
-<span style="position: absolute; bottom: 0; left: 550px; top: 300px; font-size: 80px; height: 80px; text-shadow: 0px 0px 6px rgba(255,255,255,0.7);font-family:Microsoft JhengHei"><b>產品介紹</b></span>
+	<nav class="navbar navbar-expand-sm " style="background-color: #2d7a44;">
+        <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:65px">
+        </a>
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="w3-display-container w3-text-white">
+        <img src="images\13.jpg" class="img-fluid" alt="龍品快餐店"  style="margin-bottom:10; height: 300px; width:100%;">
+        <div class="w3-display-middle w3-large"><b style ="font-size: 50px;font-family:cwTeXYen,sans-serif;color:rgb(255, 255, 255);letter-spacing: 50px;">產品介紹</b></div>
+      </div>
 
-<div class="wrap" style="text-align:center;clear:both;">
-	<a class="btn btn-large btn-blue"  href="#a1">魯肉便當</a>
-	<a class="btn btn-large btn-green" href="#a2">特製便當</a>
-	<a class="btn btn-large btn-orange" href="#a3">花枝捲飯</a>
-	<a class="btn btn-large btn-red" href="#a4">蝦捲飯</a>
-	<a class="btn btn-large btn-maroon" href="#a5">滷排骨飯</a>
-	<a class="btn btn-large btn-fuchsia" href="#a6">炸雞腿飯</a>
-	<br ><br >
-	<a class="btn btn-large btn-indigo" href="#a7">鱈魚飯</a>
-	<a class="btn btn-large btn-saddlebrown" href="#a8">炸排骨飯</a>
-	<a class="btn btn-large btn-chocolate" href="#a9">香雞排飯</a>
-	<a class="btn btn-large btn-gold" href="#a10">雙捲飯</a>
-	<a class="btn btn-large btn-darkolivegreen" href="#a11">三寶飯</a>
-	<a class="btn btn-large btn-royalblue" href="#a12">招牌飯</a>
-</div >
-<div class="box" id="a1">
-	<img src="images\section1.jpg" align="left" style="width:450px ;height:300px"/>  
+        <div class="btn-group" style="margin:10px 8px;width:100%;">  
+          <a class="btn  btn btn-medium btn-blue"  href="#a1">魯肉便當</a>
+	        <a class="btn btn-medium btn-green" href="#a2">特製便當</a>
+	        <a class="btn btn-medium btn-orange" href="#a3">花枝捲飯</a>
+	        <a class="btn btn-medium btn-red" href="#a4">蝦捲飯</a>
+	        <a class="btn btn-medium btn-maroon" href="#a5">滷排骨飯</a>
+	        <a class="btn btn-medium btn-fuchsia" href="#a6">炸雞腿飯</a>      
+	
+        </div>
+        <div class="btn-group" style="margin:10px 8px;width:100%;"> 
+        	<a class="btn btn-medium btn-indigo" href="#a7">鱈魚飯</a>
+	        <a class="btn btn-medium btn-saddlebrown" href="#a8">炸排骨飯</a>
+        	<a class="btn btn-medium btn-chocolate" href="#a9">香雞排飯</a>
+	        <a class="btn btn-medium btn-gold" href="#a10">雙捲飯</a>
+	        <a class="btn btn-medium btn-darkolivegreen" href="#a11">三寶飯</a>
+	        <a class="btn btn-medium btn-royalblue" href="#a12">招牌飯</a>
+        </div >
+	
+<div class="container-fluid" id="a1" style="margin-top:5em;">
+	<img src="images\section1.jpg" align="left" style="width:450px ;height:300px;"/>  
 	<p class="font8">魯肉便當 <hr></p>
-	<p class="font9"></br>主餐:滷肉</br></br>配菜:蛋加三樣菜自選</br></br>價格:NT60元</p>
+	<p class="font9">主餐:滷肉</br>配菜:蛋加三樣菜自選</br>價格:NT60元</p>
 </div>
-<div class="box" id="a2">
-	<img src="images\section2.jpg" align="right" style="width:450px ;height:300px" />
+<div class="container-fluid" id="a2" style="margin-top:5em;">
+	<img src="images\section2.jpg" align="right" style="width:450px ;height:300px;" />
 	<p class="font8">特製便當<hr></p>
-	<p class="font9"></br>主餐:排骨.蝦捲.滷蛋</br></br>配菜:滷蛋加三樣菜自選</br></br>價格:NT80元</p>
+	<p class="font9">主餐:排骨.蝦捲.滷蛋</br>配菜:滷蛋加三樣菜自選</br>價格:NT80元</p>
 	</div>
- <div class="box" id="a3">
+ <div class="container-fluid" id="a3" style="margin-top:5em;">
 	<img src="images\section1.jpg" align="left" style="width:450px ;height:300px" />  
 	<p class="font8">花枝捲飯<hr></p>
-	<p class="font9"></br>主餐:三條花枝卷</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:三條花枝卷</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
-<div class="box" id="a4">
+<div class="container-fluid" id="a4" style="margin-top:5em;">
 	<img src="images\section4.jpg" align="right" style="width:450px ;height:300px"/>
 	<p class="font8">蝦捲飯<hr></p>	
-	<p class="font9"></br>主餐:三條蝦捲</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:三條蝦捲</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
-<div class="box" id="a5">
+<div class="container-fluid" id="a5" style="margin-top:5em;">
 <figure>
 	<img src="images\section5.jpg" align="left" style="width:450px ;height:300px"/>
 	<p class="font8">滷排骨飯<hr></p>
-	<p class="font9"></br>主餐:滷排</br></br>配菜:三樣菜自選</br></br>價格:NT80元</p>
+	<p class="font9">主餐:滷排</br>配菜:三樣菜自選</br>價格:NT80元</p>
 	</figure>
 </div>
-<div class="box" id="a6">
+<div class="container-fluid" id="a6" style="margin-top:5em;">
 	<img src="images\section6.jpg" align="right" style="width:450px ;height:300px"/>
 	<p class="font8">炸雞腿飯<hr></p>
-	<p class="font9"></br>主餐:一支雞腿</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:一支雞腿</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
-<div class="box" id="a7">
+<div class="container-fluid" id="a7" style="margin-top:5em;">
 	<img src="images\section7.jpg"align="left" style="width:450px ;height:300px"/>
 	<p class="font8">鱈魚飯<hr></p>
-	<p class="font9"></br>主餐:鱈魚</br></br>配菜:三樣菜自選</br></br>價格:NT100元</p>
+	<p class="font9">主餐:鱈魚</br>配菜:三樣菜自選</br>價格:NT100元</p>
 </div>
-<div class="box" id="a8">
+<div class="container-fluid" id="a8" style="margin-top:5em;">
 	<img src="images\section8.jpg" align="right" style="width:450px ;height:300px"/>
 	<p class="font8">炸排骨飯<hr></p>
-	<p class="font9"></br>主餐:排骨</br></br>配菜:三樣菜自選</br></br>價格:NT80元</p>
+	<p class="font9">主餐:排骨</br>配菜:三樣菜自選</br>價格:NT80元</p>
 </div>
-<div class="box" id="a9">
+<div class="container-fluid" id="a9" style="margin-top:5em;">
 	<img src="images\section9.jpg"align="left" style="width:450px ;height:300px"/>
 	<p class="font8">香雞排飯<hr></p>
-	<p class="font9"></br>主餐:香雞排</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:香雞排</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
-<div class="box" id="a10">
+<div class="container-fluid" id="a10" style="margin-top:5em;">
 	<img src="images\section10.jpg" align="right" style="width:450px ;height:300px"/>
 	<p class="font8">雙捲飯<hr></p>
-	<p class="font9"></br>主餐:蝦捲兩條.花枝捲一條</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:蝦捲兩條.花枝捲一條</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
-<div class="box" id="a11">
+<div class="container-fluid" id="a11" style="margin-top:5em;">
 	<img src="images\section11.jpg" align="left" style="width:450px ;height:300px"/>
 	<p class="font8">三寶飯<hr></p>
-	<p class="font9"></br>主餐:花枝捲一條.蝦捲一條.排骨</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:花枝捲一條.蝦捲一條.排骨</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
-<div class="box" id="a12">
+<div class="container-fluid" id="a12" style="margin-top:5em;">
 	<img src="images\section12.jpg" align="right" style="width:450px ;height:300px"/>
 	<p class="font8">招牌飯<hr></p>
-	<p class="font9"></br>主餐:蝦捲兩條.排骨</br></br>配菜:三樣菜自選</br></br>價格:NT85元</p>
+	<p class="font9">主餐:蝦捲兩條.排骨</br>配菜:三樣菜自選</br>價格:NT85元</p>
 </div>
 <div id="Footer">
 		<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>

@@ -3,6 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -14,42 +16,85 @@
 </head>
 
 <body>
-<div>
-		
-	<div id="header">
-		<img src="images/logo.png "   style="width:30%; height:100%;float:right; " />
-		<a href="index.html" style ="position: relative; bottom: 0; left: 10px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
-	
-		<a href="product.html" style="position: relative; bottom: 0; left: 30px; top: 35px; font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
-	
-		<a href="booking.html" style="position: relative; bottom: 0; left: 50px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
-	</div>
+  <nav class="navbar navbar-expand-sm" style="background-color: #2d7a44;">
+    <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:65px">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
+      </li>
+    </ul>
+  </nav>   
+      
+  <div class="w3-display-container w3-text-white">
+    <img src="images\book1.jpg" class="img-fluid" alt="龍品快餐店"  style="margin-bottom:10px;height: 300px; width:100%;">
+    <div class="w3-display-middle w3-large"><b style ="font-size: 50px;font-family:cwTeXYen,sans-serif;color:rgb(0, 0, 0);letter-spacing: 50px;">關於龍品</b></div>
+  </div>
+  <div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:100%">
+      <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'business');" id="myLink">
+        <div class="w3-col s6 tablink"><p style="font-size: 35px;font-family:cwTeXYen,sans-serif;">經營理念</p></div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'history');">
+        <div class="w3-col s6 tablink"> <p style="font-size: 35px;font-family:cwTeXYen,sans-serif;">歷史起源</p></div>
+          </a>
+      </div>
 
-<div style="height:500px">
-<img style="width:100%; height:100%; border-style:solid; border-color:black; border-width:2px;" src="images\13.jpg" alt="龍品快餐店" >
-</div>
-<span style="position: absolute; bottom: 0; left: 550px; top: 300px; font-size: 80px; height: 80px;text-shadow: 0px 0px 6px rgba(255,255,255,0.7);font-family:Microsoft JhengHei"><b>關於龍品</b></span> 
-<div style="margin:5em 17em;">
-	<p style="font-size: 35px;font-family:cwTeXYen,sans-serif;">歷史：</br></br>
-	創始店名為“龍品魚丸店”，創立於民國八十三年，在台中已好幾家分店的龍品</br></br>
-	魚丸店，而且在網路上相當高名氣與好評，不少部落客和網友都直稱這家是台</br></br>
-	中便當界美食，且經常店門口都會排上一場串人龍，就能知道民眾的受歡迎程</br></br>
-	度。龍品快餐店則是加盟店，但與創始店龍品魚丸店有所不同，快餐店雖為加</br></br>
-	盟店，但經營方式以及食材的烹煮都是老闆與老闆娘自行烹調，僅與魚丸店拿</br></br>
-	取蝦漿的食材原料，因此取龍品之名。</br></br></br></br>
-	
-	理念：</br></br>
-	遵循古法、口味道地、食材保證新鮮～</br></br>
-	－讓您 吃的更安心－</br></br>
-	服務用心～  </br></br>
-	－您的滿意，就是我們追求的信念－
+      <div id="business" class="w3-container menu w3-padding-48 w3-card">
+        <p style="font-size: 28px;font-family:cwTeXYen,sans-serif;text-align: center;line-height:3">
+          遵循古法、口味道地、食材保證新鮮</br>
+          －讓您 吃的更安心－</br>
+          服務用心</br>
+          －您的滿意，就是我們追求的信念－
+        </p>
+      </div>     
+        
+      <div id="history" class="w3-container menu w3-padding-48 w3-card">
+        <p style="font-size: 28px;font-family:cwTeXYen,sans-serif;text-align: center;line-height:3">
+          創始店名為"龍品魚丸店"，創立於民國八十三年，在台
+          中已好幾家分店的龍品魚丸店，而且在網路上相當高名
+          氣與好評，不少部落客和網友都直稱這家是台中便當界
+          美食，且經常店門口都會排上一場串人龍，就能知道民
+          眾的受歡迎程度。龍品快餐店則是加盟店，但與創始店
+          龍品魚丸店有所不同，快餐店雖為加盟店，但經營方式
+          以及食材的烹煮都是老闆與老闆娘自行烹調，僅與魚丸
+          店拿取蝦漿的食材原料，因此取龍品之名。
+          </p>
+      </div>       
 
-</div>
-<div id="Footer">
-		<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
-		<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
-			</div>
-</div>
+    </div>     
+  </div>
+
+  <div style="background-color: #2d7a44;">
+    <p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
+    <p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
+  </div>
+
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+    </script>     
 
 </body>
 </html>
