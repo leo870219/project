@@ -7,24 +7,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<title>線上訂餐</title>
-<link rel="stylesheet" href="styles/css.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="styles/css.css" media="screen" type="text/css" />
 <link rel="stylesheet" href="styles/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
 <script src="1.js"></script>
+<title>線上訂餐</title>
+
 
 </head>
 <body>
 <div>
-<div id="header">
-				<img src="images/logo.png "   style="relative;width:30%; height:100%;float:right; " />
-				<a href="index.html" style ="position: relative; bottom: 0; left: 10px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
-			
-				<a href="product.html" style="position: relative; bottom: 0; left: 30px; top: 35px; font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
-			
-				<a href="booking.html" style="position: relative; bottom: 0; left: 50px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
-			</div>
+<nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #2d7a44;">
+<img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:75px;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+     <a class="navbar-brand" href="index.html">       
+        </a>
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
+          </li>
+        </ul>
+  </div>  
+</nav>
+
 	<div id="body">
 <div id="go" style="height:580px;width:700px; visibility:hidden; background-color:#405446;position:fixed;top:8em;left:28em ;border:1px solid #CCC;border:1px solid #333;padding:5px;border-radius:10px;">
 <p class="font7">您選擇的餐點:<input type="text" style="outline:none;border:none;background-color:#405446;color:white" readonly="readonly" id="add" name="add"></br></br>
@@ -155,7 +171,7 @@ $address=$_POST["address"];
 </fieldset>
 </form>
 </div>
-<div id="Footer">
+<div style="clear:both;background-color: #2d7a44;">
 <p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
 <p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
 	</div>

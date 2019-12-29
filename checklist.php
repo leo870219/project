@@ -11,14 +11,28 @@
 
 <body>
     <div>
-	<div id="header">
-		<img src="images/logo.png "   style="width:30%; height:100%;float:right; " />
-		<a href="index.html" style ="position: relative; bottom: 0; left: 10px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>關於龍品</b></a>
-	
-		<a href="product.html" style="position: relative; bottom: 0; left: 30px; top: 35px; font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>產品介紹</b></a>
-	
-		<a href="booking.html" style="position: relative; bottom: 0; left: 50px; top: 35px;font-size: 35px;font-family:cwTeXYen,sans-serif;color:white"><b>線上訂餐</b></a>
-	</div>
+	<nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #2d7a44;">
+<img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:75px;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+     <a class="navbar-brand" href="index.html">       
+        </a>
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
+          </li>
+        </ul>
+  </div>  
+</nav>
 <?php
 $takeway=$_POST["takeway"];
 $time=$_POST["time"];

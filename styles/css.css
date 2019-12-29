@@ -12,38 +12,12 @@
   padding: 0;
 }
 
-.wrap {
-  max-width:2000px;
-  margin: 2em auto;
-  font-family: Raleway, Arial, sans-serif;
-}
-
 hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 2px solid #eee;
     padding: 0;
-}
-
-h1, h2 {
-  margin-bottom: 1em;
-  border-bottom: 2px solid #eee;
-  line-height: 1.5;
-}
-
-h1 > small{
-  color: #666;
-}
-
-h1 > small > a,
-p > a{
-  color: #3CB371;
-  text-decoration: none;
-}
-h1 > small > a:hover,
-p > a:hover{
-  text-decoration: underline;
 }
 
 /* Buttons styles */
@@ -71,8 +45,10 @@ a.btn,.btn {
 	vertical-align: middle;
 	border: 1px solid;
 	transition: all 0.2s ease;
-	box-sizing: border-box;
+	width:80px;
+	height: 50px;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+	border-radius: 3px;
 	
 }
 /* Radius */
@@ -226,41 +202,6 @@ a.btn,.btn {
 	width:300px;
 	height:250px;
 }
-.pic1{
-	width:100px;
-	height:50px;
-}
-.relative {
-  border-radius:10px;
-  position: relative;
-  left: 50%;
-  font-size:30px;
-  font-family: cwTeXYen,sans-serif ;
-  letter-spacing:10px ;
-  color:white;
-  background-color:#405446
-}
-.relative1 {
-  border-radius:5px;
-  position: absolute;
-  top: 285px;
-  left:250px;
-  font-size:20px;
-  font-family: cwTeXYen,sans-serif ;
-  letter-spacing:5px ;
-  color:white;
-  background-color:#405446
-}
-.relative3 {	
-  width:100%;
-  text-align:center;
-  position: relative;
-  margin-top:20px;
-  font-size:15px;
-  font-family: cwTeXYen,sans-serif ;
-  color:white;
-  background-color:#405446
-}
 .font{
 	border-radius:10px;
 	font-size:30px;
@@ -277,26 +218,6 @@ a.btn,.btn {
 	font-size:30px;
 	font-family: cwTeXYen,sans-serif ;
 	letter-spacing:10px ;
-}
-.font3{
-	font-size:20px;
-	font-family: cwTeXYen,sans-serif ;
-	letter-spacing:5px ;
-	color:block;
-}
-.font4{
-	font-size:20px;
-	font-family: cwTeXYen,sans-serif ;
-	letter-spacing:20px ;
-	color:white;
-	
-}
-.font5{
-	font-size:18px;
-	font-family: cwTeXYen,sans-serif ;
-	color:black;
-	letter-spacing:5px ;
-	margin-left:-10px;
 }
 .font6{
 	width:5em;
@@ -324,22 +245,20 @@ a.btn,.btn {
 	color:block;
 }
 .font9{
-	border-radius:10px;
-	font-size:30px;
+	font-size:25px;
 	font-family: cwTeXYen,sans-serif ;
 	text-align:center;
 	letter-spacing:10px ;
 	color:block;
-	line-height: 70px;
+	line-height: 1.5em;
 }
 .font10{
-	border-radius:10px;
-	font-size:15px;
+	font-size:25px;
 	font-family: cwTeXYen,sans-serif ;
 	text-align:center;
-	letter-spacing:10px ;
 	color:block;
 }
+
 .font11{
 	font-size:25px;
 	font-family:cwTeXYen,sans-serif;
@@ -388,12 +307,6 @@ background-color:#405446 ;
 	width:70%;
 }
 
-.okok{
-	outline:none;
-	border:none;
-	float:right;
-	text-align:right;
-}
 
 
 
