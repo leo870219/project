@@ -3,262 +3,115 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<title>線上訂餐</title>
 <link rel="stylesheet" href="styles/css.css"/>
 <link rel="stylesheet" href="styles/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="1.js"></script>
-<script>
-	$( function() {
-		$(  "#datepicker" ).datepicker({
-	  maxDate: " +5d",
-	  minDate: "0"
-	});
-	// 獲取值
-	var dateFormat = $( "#datepicker" ).datepicker( "option", "dateFormat" );
-	// 設定顯示方式
-	$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
-	$("#datepicker").attr('autocomplete', 'off'); 
-	} );
-	
-	
-	function a(){                   //將可訂購時間丟入陣列，當使用者選擇日期時觸發
-		var dt = new Date();
-	var month = new Array(12);
-	var day = new Array(31);
-	var hour = new Array(24);
-	var min = new Array(60);
-	var a =0;
-	var abc=new Array('09:30','09:35','09:40','09:45','09:50','09:55'
-	,'10:00','10:05','10:10','10:15','10:20','10:25','10:30','10:35','10:40','10:45','10:50','10:55'
-	,'11:00','11:05','11:10','11:15','11:20','11:25','11:30','11:35','11:40','11:45','11:50','11:55'
-	,'12:00','12:05','12:10','12:15','12:20','12:25','12:30','12:35','12:40','12:45','12:50','12:55'
-	,'13:00','13:05','13:10','13:15','13:20','13:25','13:30','13:35','13:40','13:45','13:50','13:55'
-	,'14:00','14:05','14:10','14:15','14:20','14:25','14:30','14:35','14:40','14:45','14:50','14:55'
-	,'15:00','15:05','15:10','15:15','15:20','15:25','15:30','15:35','15:40','15:45','15:50','15:55'
-	,'16:00','16:05','16:10','16:15','16:20','16:25','16:30','16:35','16:40','16:45','16:50','16:55'
-	,'17:00','17:05','17:10','17:15','17:20','17:25','17:30','17:35','17:40','17:45','17:50','17:55'
-	,'18:00','18:05','18:10','18:15','18:20','18:25','18:30','18:35','18:40','18:45','18:50','18:55'
-	,'19:00','19:05','19:10','19:15','19:20','19:25','19:30','19:35','19:40','19:45','19:50','19:55'
-	,'20:00','20:05','20:10','20:15','20:20','20:25','20:30'
-	)
-	
-	
-		var a=document.getElementById('datepicker');
-		var b=a.value;
-		var NewArray = new Array();
-	　var NewArray = b.split( "-" , 3 );
-	if (NewArray[2] == dt.getDate() && dt.getHours()>9 && dt.getHours()<20 && dt.getMinutes()<15 && dt.getMinutes()>=0){  //判斷訂購日期是否為今日訂購以及是否在可訂購時間內，並設定至少30分鐘後取餐
-		form=document.theForm;
-	a=dt.getHours()+":"+'45';
-	var aa =abc.indexOf(a);
-	var b=0;
-	for(i=aa;i<abc.length;i++){
-		form.ti.options[b]=new Option(abc[i]);
-		b=b+1;
-	 }
-	}  else if  (NewArray[2] == dt.getDate() && dt.getHours()>9 && dt.getHours()<20 &&dt.getMinutes()<30 && dt.getMinutes()>=15){
-		form=document.theForm;
-	a=dt.getHours()+1+":"+'00';
-	var aa =abc.indexOf(a);
-	var b=0;
-	for(i=aa;i<abc.length;i++){
-		form.ti.options[b]=new Option(abc[i]);
-		b=b+1;
-	 }
-	}
-	   else if  (NewArray[2] == dt.getDate() && dt.getHours()>9 && dt.getHours()<20 && dt.getMinutes()<45 && dt.getMinutes()>=30){
-		form=document.theForm;
-	a=dt.getHours()+1+":"+'00';
-	var aa =abc.indexOf(a);
-	var b=0;
-	for(i=aa;i<abc.length;i++){
-		form.ti.options[b]=new Option(abc[i]);
-		b=b+1;
-	 }
-	 }
-	   else if  (NewArray[2] == dt.getDate()&& dt.getHours()>9 && dt.getHours()<20&&dt.getMinutes()<60 && dt.getMinutes()>=45){
-		form=document.theForm;
-	a=dt.getHours()+1+":"+'30';
-	var aa =abc.indexOf(a);
-	var b=0;
-	for(i=aa;i<abc.length;i++){
-		form.ti.options[b]=new Option(abc[i]);
-		b=b+1;
-	 }
-	}   else if (NewArray[2] != dt.getDate()){
-		form=document.theForm;
-	for(i=0;i<abc.length;i++){
-		form.ti.options[i]=new Option(abc[i]);
-	}
-	}
-		else {
-		alert('請在早上9點後及晚上8點前訂購哦~');
-		}
-	}
-	function node(name, child){
-		this.name=name;
-		this.child=child;
-	}
-	
-	function delivery(){
-		document.getElementById('demo').style.display="block";
-		document.getElementById('column1').required=true;
-		document.getElementById('column2').required=true;
-		document.getElementById('column3').required=true;
-		document.getElementById('address').required=true;
-	}
-	
-	function takeout(){
-		document.getElementById('demo').style.display="none";
-		document.getElementById('column1').required=false;
-		document.getElementById('column2').required=false;
-		document.getElementById('column3').required=false;
-		document.getElementById('address').required=false;
-	
-	} 
-	
-	function dataHierarchy(){
-		// 地區
-		var area=new Array();
-		var i=0;
-		area[i++]=new node("", [""]);
-		area[i++]=new node("北區", ["中清路三段", "文心路四段", "北平路","天津路"]);
-		
-		// 縣市
-		var output=new Array();
-		var i=0;
-		output[i++]=new node("", );
-		output[i++]=new node("台中市", area);
-	
-	
-		return(output);
-	}
-	dataTree=dataHierarchy();
-	
-	// 第三個欄位被更動後的反應動作
-	function onChangeColumn3(){
-		updatePath();
-	}
-	
-	// 第二個欄位被更動後的反應動作
-	function onChangeColumn2(){
-		form=document.theForm;
-		index1=form.column1.selectedIndex;
-		index2=form.column2.selectedIndex;
-		index3=form.column3.selectedIndex;
-		// Create options for column 3
-		for (i=0;i<dataTree[index1].child[index2].child.length;i++)
-			form.column3.options[i]=new Option(dataTree[index1].child[index2].child[i], dataTree[index1].child[index2].child[i]);
-		form.column3.options.length=dataTree[index1].child[index2].child.length;
-		updatePath();
-	}
-	
-	// 第一個欄位被更動後的反應動作
-	function onChangeColumn1() {
-		form=document.theForm;
-		index1=form.column1.selectedIndex;
-		index2=form.column2.selectedIndex;
-		index3=form.column3.selectedIndex;
-		// Create options for column 2
-		for (i=0;i<dataTree[index1].child.length;i++)
-			form.column2.options[i]=new Option(dataTree[index1].child[i].name, dataTree[index1].child[i].name);
-		form.column2.options.length=dataTree[index1].child.length;
-		// Clear column 3
-		form.column3.options.length=0;
-		updatePath();
-	}
-	
-	// 修改所顯示的路徑
-	function updatePath(){
-		form=document.theForm;
-		index1=form.column1.selectedIndex;
-		index2=form.column2.selectedIndex;
-		index3=form.column3.selectedIndex;
-		if ((index1>=0) && (index2>=0) && (index3>=0)) {
-			text1=form.column1.options[index1].text;
-			text2=form.column2.options[index2].text;
-			text3=form.column3.options[index3].text;
-			form.path.value=text1+text2+text3;
-		} else
-			form.path.value="";
-			
-			
-	}
-	
-	</script>
+<script src="https://kit.fontawesome.com/c3595a1670.js" crossorigin="anonymous"></script>
+<title>線上訂餐</title>
+
 </head>
 <body>
-	<nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #2d7a44;">
-		<img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:75px;">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
-			 <a class="navbar-brand" href="index.html">       
-				</a>
-				<ul class="navbar-nav ">
-					 <li class="nav-item">
-					<a class="nav-link" href="index.html" style ="font-size: 25px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
-					 </li>
-					 <li class="nav-item">
-					<a class="nav-link" href="product.html" style ="font-size: 25px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
-					 </li>
-					<li class="nav-item">
-					<a class="nav-link" href="booking.html" style ="font-size: 25px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
-					</li>
-				</ul>
-			</div>  
-	</nav>
+	<section id="intro">
+		<div class="container">
+		  <div class="navbar navbar-expand-md">
+		  <img src="images/logo1.png" class="img-fluid" alt="logo">
+		  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="fas fa-bars"></span>
+		  </button>
+		  <div class="collapse navbar-collapse " id="collapsibleNavbar">
+			<ul class="navbar-nav ">
+				<a class="navbar-brand" href="index.html"></a>
+			<ul class="navbar-nav ">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">關於龍品</a></li>
+			  <li class="nav-item">
+				<a class="nav-link" href="product.html">產品介紹</a></li>
+			  <li class="nav-item">
+				<a class="nav-link" href="booking.html" >線上訂餐</a>
+			  <li>
+			</ul>
+		  </div>  
+		</div>
+	  </section>	
 
-<div  class="container-fluid">
-<form name="theForm" method="post" action="booking.php">
-<fieldset>
-	<legend>
-		<p class="font" style="margin:1em 0 0 21em ">請輸入訂購資料</p></legend>
-	<div class="font1" >
-	<p class="font1" style="margin-left:600px;margin-top:30px">取餐方式:
-<input type="radio" onclick="delivery()" name="takeway"  value="delivery"required>外送
-	<input type="radio" onclick="takeout()" name="takeway" value="takeout">外帶</div><br>
-	<p class="font1"style="margin-left:500px;margin-top:20px">取餐時間:<input type="text" required id="datepicker" name="time" onchange="a()" style="width:220px;">
-	<select id="ti" name="ti" required style="font-size:25px;color:gray;height:43px;width:140px;margin-left:-10px"></select></p><br> 
-	
-<p class="font1" style="margin-left:500px;margin-top:20px">姓&nbsp&nbsp&nbsp&nbsp名:<input type="text"  name="username" size="30" placeholder="姓名" required style="width:360px"></p><br>
-	<p class="font1"style="margin-left:500px;margin-top:20px">電&nbsp&nbsp&nbsp&nbsp話:<input type="tel" pattern="(\d{4}-\d{6})" placeholder="行動電話號碼" title="例:0987-654321" name="usertel" size="30"style="width:360px"></p><br>
-	<p class="font1"style="margin-left:500px;margin-top:20px">電子郵件:<input type="email" name="usermail"  placeholder="電子郵件" style="width:360px"></p><br>
-	<div id="demo" ><p class="font1"style="margin-left:500px;margin-top:20px">外送地址:<select name="column1" id="column1" size=1 onclick="onChangeColumn1()"		
-	style="font-size:25px;font-family: Microsoft JhengHei ;letter-spacing:10px;width:105px";>
-	
-	<script>
-	for (i=0; i<dataTree.length; i++)
-					document.writeln("<option value=\""+dataTree[i].name+"\">"+dataTree[i].name);
-				</script>
-			</select>
-			<select name="column2" id="column2" size=1 onclick="onChangeColumn2()" 			
-			style="margin-left:-10px;font-size:25px;font-family: Microsoft JhengHei ;width:80px;margin-left:-10px"; >
-			</select>
-			<select name="column3" id="column3" size=1 onclick="onChangeColumn3()" 
-			style="width:165px;margin-left:-10px;font-size:25px;font-family: Microsoft JhengHei "; >
-			</select>
-	<input type="hidden" name="path"></p><br>
-	<input type="text" id="address" name="address"placeholder="外送地址"  style="width:360px;margin-left:26em;margin-top:20px;font-size:25px" ></div>
-<input type="submit" class="font" style="margin:29px 0 0.5em 710px" value="訂購"></p>
-	</fieldset>
-	</form>
-	</div>
-	<div id="Footer">
-			<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
-			<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
-				</div>
-</div>
-	</body>
-	</html>
+	<section id="booking-second" style="background-image: url('images/bg.jpg')";>
+		<div class="container">
+			<form name="theForm" method="post" action="booking.php">
+					<div class="row justify-content-center">
+						<h2>請輸入訂購資料</h2>
+					</div>
+					<label>取餐方式:</label>
+					<div class="form-check-inline ">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input"  onclick="delivery()" name="takeway"  value="delivery"required>外送
+						</label>
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" onclick="takeout()" name="takeway" value="takeout">外帶
+						</label>
+					</div></br>
+					<label>取餐時間:</label>
+					<div class="form-inline">
+						<input type="text" class="form-control"  name="time" placeholder="請先選擇日期" required id="datepicker" onchange="a()">
+						<select id="ti" name="ti" required class="form-control" ></select>
+					</div>
+					<label for="usr">姓名:</label>
+					<input type="text" class="form-control" name="username" placeholder="姓名" required>
+					<label for="tel">電話:</label>
+					<input type="tel" class="form-control" pattern="(\d{4}-\d{6})" placeholder="請輸入行動電話號碼" title="例:0987-654321" name="usertel" size="30" required>
+				
+					<label>電子郵件:</label>
+					<input type="email" name="usermail" class="form-control"  placeholder="請輸入電子郵件" required>
+					<div id="demo">
+					<label>外送地址:</label>
+							
+								<select class="form-control" name="column1" id="column1" size=1  placeholder="請輸入電子郵件" onclick="onChangeColumn1()">
+								<option value="" style="display: none">請先選擇縣市</option>
+								<script>
+								for (i=1; i<dataTree.length; i++)
+								document.writeln("<option value=\""+dataTree[i].name+"\">"+dataTree[i].name);
+								</script>
+								</select>
+								<select class="form-control" name="column2" id="column2" size=1 onclick="onChangeColumn2()">
+								</select>
+								<select class="form-control" name="column3" id="column3" size=1 onclick="onChangeColumn3()">
+								</select>
+								<input class="form-control" type="text" id="address" name="address"placeholder="外送地址">
+								<input type="hidden" name="path">
+							</div>
+					<button type="submit" class="btn btn-primary">選擇餐點</button>
+			</form>
+		</div>
+	</section>
+
+<section id="latest">
+	<footer>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img-fluid" src="images/logo1.png">
+			</div>
+			<div class="col-md-4">
+				<h3>連結</h3>
+				<a href="index.html">關於龍品</a>
+				<a href="product.html">產品介紹</a>
+				<a href="booking.html">線上訂餐</a>
+			</div>
+			<div class="col-md-4">
+				<h3>聯絡我們</h3>
+				<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+			</div>
+		</div>
+</footer>
+</section>
+
+</body>
+</html>
