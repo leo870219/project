@@ -2,16 +2,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>線上訂餐</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/css.css" media="screen" type="text/css" />
 <link rel="stylesheet" href="styles/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="1.js"></script>
+<title>線上訂餐</title>
 </head>
 
 <body>
     <div>
-	<nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #2d7a44;">
+    <nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #2d7a44;">
 <img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:75px;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -121,7 +128,7 @@ echo "</div>"
 
 ?>
 
-<button style="margin:1em 0 1em 5em" class="font2" onclick="window.history.go(-1)">重新訂購</button>
+<input type="button" style="margin:1em 0 1em 5em" class="font2" onclick="window.history.back()" value="重新訂購">
 <input style="margin:1em 0 1em 13em" class="font2"  type="submit" onclick=javascript:location.href="booksuccessful.php" value="確認訂購">
 </form>
 </div>
