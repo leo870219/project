@@ -3,6 +3,14 @@
 
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+p,b,a,input,label,span,ul,li{
+font-family: cwTeXYen,sans-serif;
+font-size: 25px;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family: cwTeXYen,sans-serif;
+}
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -13,10 +21,8 @@
 }
 
 hr {
-    display: block;
-    height: 1px;
     border: 0;
-    border-top: 2px solid #eee;
+	border-top: 2px solid #eee;
     padding: 0;
 }
 
@@ -46,7 +52,7 @@ a.btn,.btn {
 }
 /* Radius */
 .btn-radius {
-  border-radius: 3px;
+  border-radius: 300px;
 }
 /* Sizes */
 .btn-small {
@@ -63,40 +69,22 @@ a.btn,.btn {
 }
 
 /* Colors */
-.btn-green {
-	color: #3CB371;
-	border-color: #3CB371;
-}
 .btn-green:hover {
   background: #3CB371;
   color: #fff;
   border-color: #3CB371;		
 }
 
-.btn-blue {
-	color: #4682B4;
-	border-color: #4682B4;
-}
 .btn-blue:hover {
   background: #4682B4;
   color: #fff;
   border-color: #4682B4;		
 }
 
-.btn-orange {
-	color: #FF8C00;
-	border-color: #FF8C00;
-}
 .btn-orange:hover {
   background: #FF8C00;
   color: #fff;
-  border-color: #FF8C00;
-  		
-}
-
-.btn-red {
-	color: #B22222;
-	border-color: #B22222;
+  border-color: #FF8C00;	
 }
 .btn-red:hover {
   background: #B22222;
@@ -104,30 +92,16 @@ a.btn,.btn {
   border-color: #B22222;	
 }
 
-.btn-maroon {
-	color: #800000;
-	border-color: #800000;
-}
 .btn-maroon:hover {
   background: #800000;
   color: #fff;
   border-color: #800000;	
 }
 
-
-.btn-fuchsia {
-	color: #FF00FF;
-	border-color: #FF00FF;
-}
 .btn-fuchsia:hover {
   background: #FF00FF;
   color: #fff;
   border-color: #FF00FF;	
-}
-
-.btn-indigo {
-	color: #4B0082;
-	border-color: #4B0082;
 }
 
 .btn-indigo:hover {
@@ -136,31 +110,17 @@ a.btn,.btn {
   border-color: #4B0082;	
 }
 
-.btn-saddlebrown {
-	color:#8B4513;
-	border-color: #8B4513;
-}
-
 .btn-saddlebrown:hover {
   background:#8B4513;
   color: #fff;
   border-color: #8B4513;	
 }
 
-.btn-chocolate {
-	color: #D2691E;
-	border-color: #D2691E;
-}
 
 .btn-chocolate:hover {
   background: #D2691E;
   color: #fff;
   border-color: #D2691E;	
-}
-
-.btn-gold {
-	color:	#FFD700;
-	border-color: 	#FFD700;
 }
 
 .btn-gold:hover {
@@ -169,20 +129,10 @@ a.btn,.btn {
   border-color: 	#FFD700;	
 }
 
-.btn-darkolivegreen {
-	color: #556B2F;
-	border-color:#556B2F;
-}
-
 .btn-darkolivegreen:hover {
   background: #556B2F;
   color: #fff;
   border-color:#556B2F;	
-}
-
-.btn-royalblue {
-	color: #4169E1;
-	border-color: #4169E1;
 }
 
 .btn-royalblue:hover {
@@ -212,6 +162,16 @@ a.btn,.btn {
 	font-family: cwTeXYen,sans-serif ;
 	letter-spacing:10px ;
 }
+.font3{
+	font-size: 25px;
+	font-family: cwTeXYen,sans-serif;
+	color:white;
+}
+.font4{
+	font-size: 30px;
+	font-family: cwTeXYen,sans-serif;
+	color:white;
+}
 .font6{
 	width:5em;
 	border-radius:10px;
@@ -229,24 +189,19 @@ a.btn,.btn {
 	color:white ;
 	margin-left:20px; 	/*div id go中的文字*/
 }
-.font8{
-	border-radius:10px;
-	font-size:40px;
-	font-family:  cwTeXYen,sans-serif ;
+#fourth h1{
 	text-align:center;
 	letter-spacing:10px ;
-	color:block;
+	color:white;
+	line-height: 2em;
+	font-family: cwTeXYen,sans-serif;
 }
-.font9{
-	font-size:25px;
-	font-family: cwTeXYen,sans-serif ;
+#fourth p{
+	font-size: 25px;
 	text-align:center;
 	letter-spacing:10px ;
-	color:block;
-	line-height: 1.5em;
-}
-.font10{
-	
+	color:white;
+	line-height: 2.5em;
 }
 
 .font11{
@@ -255,13 +210,6 @@ a.btn,.btn {
 	margin:1em 0 1em 0;
 	color:block;
 	width:1050px;
-}
-
-#header{
-height:120px;
-background-color:#405446 ;border-style:solid;
-border-color:black;
-border-width:1px;
 }
 
 .grid-container {
@@ -279,22 +227,280 @@ border-width:1px;
 }
 
 
-#body{
-width:75%;
-float:left;
-}
-#Footer{
-
-background-color:#405446 ;
-}
-#side1{
-	float:right;
-	width:25%;
-	
-}
 .content{
 	margin:0 15em ;
 	width:70%;
+}
+#index-second p{
+	letter-spacing:10px ;
+	font-size:30px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+#index-second h1{
+	font-family: cwTeXYen,sans-serif;
+	letter-spacing:10px ;
+	font-size:67px;
+	font-weight:bolder;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	
+	}
+#index-third{
+	margin-top: 3em;
+}
+#index-third h2{
+	text-align: center; 
+}
+
+#index-third .container{
+	padding: 30px;
+}
+#business p{
+	margin: 80px auto;
+	line-height: 50px;
+}
+#history img{
+	margin:0 50px; 
+}
+#history p{
+	margin:50px auto; 
+}
+#index-fourth {
+	margin-top: 4em;
+	margin-bottom: 3em;
+}
+#index-fourth p{
+	margin-top: 2em;
+	font-size: 20px;
+	letter-spacing: 5px;
+}
+#index-fourth h2{
+	margin-bottom: 2em;
+	text-align: center;
+	background-color: rgb(227, 229, 227);
+	border-radius: 80px;
+	padding: 10px;
+}
+#index-fourth iframe{
+	width: 100%;
+	height: 500px;
+}
+
+#intro {
+background-color:rgb(238, 236, 231);
+}
+
+#intro img{
+width: 200px;	
+}
+#intro li{
+	margin: 0 10px;
+}
+#collapsibleNavbar a{
+	font-size: 25px;
+	font-family:cwTeXYen,sans-serif;
+	color:black;
+}
+
+#second h1{
+font-family: cwTeXYen,sans-serif;
+letter-spacing:10px ;
+font-size:67px;
+font-weight:bolder;
+color: white;
+text-align: center;
+
+}
+#second p{
+	letter-spacing:10px ;
+	font-size:30px;
+	color: white;
+	text-align: center;
+}
+#third{
+	padding:40px 20px;
+}
+#third .btn{
+	border-radius: 300px;
+	color: white;
+	font-size: 25px;
+}
+#third .btn-group{
+	width: 100%;
+	margin:10px 20px;
+}
+#third a{
+	font-size: 20px;
+}
+
+#fourth .container{
+	padding-top:5em;
+	padding-bottom:5em; 
+}
+#fourth img{
+	width:450px ;
+	height:300px;
+}
+footer{
+	border-top: 1px solid #000000;
+	padding: 20px 0px;
+	background-color: rgb(238, 236, 231);
+}
+footer h3{
+	font-family: cwTeXYen,sans-serif;
+	font-weight:bolder;
+	margin-bottom: 20px;
+}
+footer p{
+	font-size: 20px;
+
+}
+footer a{
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+footer img{
+	padding-top:18px ;
+	width: 300px;
+}
+footer a{
+	color: black;
+}
+
+#booking-second h2{
+	line-height: 1em;
+	letter-spacing: 5px;
+	font-family: cwTeXYen,sans-serif;
+	padding:1em 0 ;
+
+} 
+#booking-second input select{
+	margin-bottom: 10px;
+}
+#booking-second p{
+	font-size: 20px;
+}
+#ti {
+	width: 50%;
+}
+#datepicker {
+	width: 50%;
+
+}
+#booking b,a,span{
+	font-size: 15px;
+}
+#booking-second label{
+	font-size: 20px;
+}
+
+#booking-second .container{
+	background-color: rgb(255, 255, 255);
+	width: 50%;
+	height: auto;
+}
+#booking-second{
+	padding: 2em 0;
+}
+#booking-second button{
+	background-color:rgb(119, 172, 107);
+	font-size: 20px;
+	margin:1em auto;
+	width: 100%;
+	height: 40px;
+}
+#modal-body button{
+	border-radius: 5px;
+    width: 100%;
+	height: 50px;
+	font-size: 25px;
+	font-family: cwTeXYen,sans-serif;
+	margin:0.5em;
+}
+
+#menu-img{
+	width: 150px;
+	margin: 1em;
+
+}
+#bk-second .row .text-center button{
+	width: 50%;
+	height: 50px;
+	border: solid 1px;
+	border-radius: 2em 2em 2em 2em;
+
+}
+
+#bk-second h3{
+	font-family: cwTeXYen,sans-serif;
+	text-align: center;
+}
+
+#bk-second .modal-header h2{
+	font-family: cwTeXYen,sans-serif;
+}
+#bk-second .modal-header input{
+	outline:none;border:none;
+}
+#bk-second .modal-body select{
+	margin: 0.5em;
+}
+#bk-second .modal-body p{
+	margin: 0.5em;
+}
+#side1 h3{
+	font-family: cwTeXYen,sans-serif;
+	text-align: left;
+	padding-top: 1em;
+}
+#side1{
+	border-left:solid 1px  rgb(197, 191, 191);
+	border-top:solid 1px  rgb(197, 191, 191);
+}
+#bk-second .col-md-9{
+	border-top:solid 1px  rgb(197, 191, 191);
+	padding:2em 1em;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+	#third {
+		padding: 20px 10px;
+	}
+	#third a {
+		font-size: 15px;
+	}
+	#fourth h1 {
+		margin-top: 1.3em;
+		line-height: 1em;
+	}
+	#fourth p {
+		font-size: 25px;
+		text-align: center;
+		letter-spacing: 10px;
+		color: white;
+		line-height: 2em;
+		font-size:23px;
+	}
+	footer a {
+		font-size: 15px;
+		margin-right: 10px;
+	}
+	footer p{
+		font-size: 15px;
+	}
+	footer {
+		border-top: 1px solid #c9c9c9;
+		padding: 5px 0px;
+		background-color: rgb(238, 236, 231);
+	}
+	}
+	footer h3 {
+		font-family: cwTeXYen,sans-serif;
+		font-weight: bolder;
+		margin-bottom: 20px;
+	}
 }
 
 
