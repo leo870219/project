@@ -1,20 +1,20 @@
 <?php
 	include("connMysqlObj.php");
 	if(isset($_POST["action"])&&($_POST["action"]=="update")){
-		$sql_query = "UPDATE order1 SET Name=?,Phone=?,Takeway=?,Date=?,Time=?,Address=?,Mail=?,Meals=?,Size=?,Marinade=?,Ad=?,Spicy=?,Cut=?,Amount=? WHERE cNumber=?";
+		$sql_query = "UPDATE order1 SET Name=?,Phone=?,Takeway=?,Date=?,Time=?,Address=?,Mail=?,Meals=?,Size=?,Marinade=?,Ad=?,Spicy=?,Cut=?,Amount=?Total=? WHERE cNumber=?";
 		$stmt = $db_link -> prepare($sql_query);
-		$stmt -> bind_param("ssssssssssssssi", $_POST["Name"], $_POST["Phone"], $_POST["Takeway"], $_POST["Date"], $_POST["Time"], $_POST["Address"], $_POST["Mail"], $_POST["Meals"], $_POST["Size"], $_POST["Marinade"], $_POST["Ad"], $_POST["Spicy"], $_POST["Cut"], $_POST["Amount"],$_POST["cNumber"]);
+		$stmt -> bind_param("ssssssssssssssi", $_POST["Name"], $_POST["Phone"], $_POST["Takeway"], $_POST["Date"], $_POST["Time"], $_POST["Address"], $_POST["Mail"], $_POST["Meals"], $_POST["Size"], $_POST["Marinade"], $_POST["Ad"], $_POST["Spicy"], $_POST["Cut"], $_POST["Amount"],$_POST["Total"],$_POST["cNumber"]);
 		$stmt -> execute();
 		$stmt -> close();
 		$db_link -> close();
 		//重新導向回到主畫面
 		header("Location: data.php");
 	}
-	$sql_select = "SELECT cNumber, Name, Phone, Takeway, Date, Time, Address, Mail, Meals,Size,Marinade,Ad,Spicy,Cut,Amount FROM order1 WHERE cNumber = ?";
+	$sql_select = "SELECT cNumber, Name, Phone, Takeway, Date, Time, Address, Mail, Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total FROM order1 WHERE cNumber = ?";
 	$stmt = $db_link -> prepare($sql_select);
 	$stmt -> bind_param("i", $_GET["id"]);
 	$stmt -> execute();
-	$stmt -> bind_result($cNumber,$Name, $Phone, $Takeway, $Date, $Time, $Address, $Mail, $Meals, $Size, $Marinade, $Ad, $Spicy, $Cut, $Amount);
+	$stmt -> bind_result($cNumber,$Name, $Phone, $Takeway, $Date, $Time, $Address, $Mail, $Meals, $Size, $Marinade, $Ad, $Spicy, $Cut, $Amount,$Total);
 	$stmt -> fetch();
 ?>
 <html>
@@ -39,8 +39,8 @@
     </tr>
     <tr>
       <td>取餐方式</td><td>
-          <input type="radio" onclick="delivery()" name="Takeway"  value="delivery" <?php if($Takeway=="delivery") echo "checked";?>> 外送
-	      <input type="radio" onclick="takeout()" name="Takeway" value="takeout" <?php if($Takeway=="takeout") echo "checked"?>>外帶</td>
+          <input type="radio" onclick="delivery()" name="Takeway"  value="delivery" <?php if($Takeway=="外送") echo "checked";?>> 外送
+	      <input type="radio" onclick="takeout()" name="Takeway" value="takeout" <?php if($Takeway=="外帶") echo "checked"?>>外帶</td>
     </tr>
     <tr>
       <td>取餐日期</td><td><input type="text" name="Date" id="Date" value="<?php echo $Date;?>"></td>
@@ -73,6 +73,9 @@
     </tr>
     <tr>
       <td>數量</td><td><input type="text" name="Amount" id="Amount" value="<?php echo $Amount;?>"></td>
+    </tr>
+    <tr>
+      <td>總金額</td><td><input type="text" name="Total" id="Total" value="<?php echo $Total;?>"></td>
     </tr>
     <tr>
       <td colspan="2" align="center">

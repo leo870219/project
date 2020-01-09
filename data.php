@@ -1,6 +1,6 @@
 <?php 
 	header("Content-Type: text/html; charset=utf-8");
-	include("connMysql.php");
+	include("connMysqlObj.php");
 	$seldb = @mysqli_select_db($db_link, "mydb");
 	if (!$seldb) die("資料庫選擇失敗！");
 	$sql_query = "SELECT * FROM order1";
@@ -33,6 +33,7 @@
 	<th>加辣</th>
 	<th>是否要切</th>
 	<th>數量</th>
+	<th>總金額</th>
   </tr>
   <!-- 資料內容 -->
 <?php
@@ -53,6 +54,7 @@
 		echo "<td>".$row_result["Spicy"]."</td>";
 		echo "<td>".$row_result["Cut"]."</td>";
 		echo "<td>".$row_result["Amount"]."</td>";
+		echo "<td>".$row_result["Total"]."</td>";
 		echo "<td><a href='update.php?id=".$row_result["cNumber"]."'>修改</a> ";
 		echo "<a href='delete.php?id=".$row_result["cNumber"]."'>刪除</a></td>";
 		echo "</tr>";

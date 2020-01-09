@@ -10,11 +10,11 @@
 		//重新導向回到主畫面
 		header("Location: data.php");
 	}
-	$sql_select = "SELECT cNumber, Name, Phone, Takeway, Date, Time, Address, Mail, Meals,Size,Marinade,Ad,Spicy,Cut,Amount FROM order1 WHERE cNumber = ?";
+	$sql_select = "SELECT cNumber, Name, Phone, Takeway, Date, Time, Address, Mail, Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total FROM order1 WHERE cNumber = ?";
 	$stmt = $db_link -> prepare($sql_select);
 	$stmt -> bind_param("i", $_GET["id"]);
 	$stmt -> execute();
-	$stmt -> bind_result($cNumber,$Name, $Phone, $Takeway, $Date, $Time, $Address, $Mail, $Meals, $Size, $Marinade, $Ad, $Spicy, $Cut, $Amount);
+	$stmt -> bind_result($cNumber,$Name, $Phone, $Takeway, $Date, $Time, $Address, $Mail, $Meals, $Size, $Marinade, $Ad, $Spicy, $Cut, $Amount,$Total);
 	$stmt -> fetch();
 ?>
 <html>
@@ -77,6 +77,9 @@
     </tr>
     <tr>
       <td>數量</td><td><?php echo $Amount;?></td>
+    </tr>
+    <tr>
+      <td>總金額</td><td><?php echo $Total;?></td>
     </tr>
     <tr>
       <td colspan="2" align="center">
