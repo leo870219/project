@@ -16,31 +16,36 @@
 <title>線上訂餐</title>
 </head>
 <body>
-	<div>
-	<nav class="navbar navbar-expand-md  navbar-dark" style="background-color: #2d7a44;">
-<img src="images/logo.png" class="img-fluid" alt="logo" style="width:200px;height:75px;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-     <a class="navbar-brand" href="index.html">       
-        </a>
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">關於龍品</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">產品介紹</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="booking.html" style ="font-size: 30px;font-family:cwTeXYen,sans-serif;color:white">線上訂餐</a>
-          </li>
-        </ul>
-  </div>  
-</nav>
-			<div id="body">
-			<p  style="font-family:cwTeXYen,sans-serif;color:black;font-size:40px;margin:6em 0 6.5em 17em">感謝您的訂購</p>
+  <section id="intro">
+		<div class="container">
+		  <div class="navbar navbar-expand-md">
+			<a class="navbar-brand" href="#">
+			  <img src="images/logo.png" alt="logo" style="width:130px;">
+			</a> 
+		  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="fas fa-bars"></span>
+		  </button>
+				<div class="collapse navbar-collapse " id="collapsibleNavbar">
+			<ul class="navbar-nav ">
+				<a class="navbar-brand" href="index.html"></a>
+			<ul class="navbar-nav ">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">關於龍品</a></li>
+			  <li class="nav-item">
+				<a class="nav-link" href="product.html">產品介紹</a></li>
+			  <li class="nav-item">
+				<a class="nav-link" href="booking.html" >線上訂餐</a>
+			  <li>
+			</ul>
+		  </div>  
+		  </div>
+		</div>
+	</section>
+
+<section id="bkok-second">
+			<div class="container">
+      <h1 class="text-center ">感謝您的訂購，五秒後將自動回到首頁</h1>
+        <script>setTimeout("location.href='index.html'",5000)</script>
 			<?php
 $takeway=$_POST["takeway"];
 $time=$_POST["time"];
@@ -56,7 +61,7 @@ $d=$_POST["d"];
 $e=$_POST["e"];
 $f=$_POST["f"];
 $g=$_POST["g"];
-
+$total=$_POST['total'];
 $a= implode(',', $a);
 $b= implode(',', $b);
 $c= implode(',', $c);
@@ -77,7 +82,7 @@ if ($db_link->connect_error!="") {
 else{
 	$db_link->query("set names'utf8'");
 
-	$sql="INSERT INTO order1 (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g')";
+	$sql="INSERT INTO order1 (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g','$total')";
 
 	if ($db_link->query($sql) === TRUE) {
 
@@ -89,10 +94,28 @@ else{
 
 ?>
 			</div>	
-   			 <div id="Footer">
-<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。地址：台中市北區北平路二段68之1號</p>
-<p  style="font-family:cwTeXYen,sans-serif;color:white;font-size:25px">。備註：如餐點需訂購10份以上，請撥電話:04-2291-8106。</p>
+      </section>
+
+      <section id="latest">
+	<footer>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img-fluid" src="images/logo1.png">
 			</div>
+			<div class="col-md-4">
+				<h3>連結</h3>
+				<a href="index.html">關於龍品</a>
+				<a href="product.html">產品介紹</a>
+				<a href="booking.html">線上訂餐</a>
+			</div>
+			<div class="col-md-4">
+				<h3>聯絡我們</h3>
+				<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+			</div>
+		</div>
+</footer>
+</section>
 </div>
 </body>
 </html>

@@ -188,19 +188,16 @@ form.path.value=text1+text2+text3;
 form.path.value="";
 }
 
-function on()
-{
-if (baseText == null) 
-{
-baseText =1;
-document.getElementById("add").value="滷肉便當";
+function money(){
+var amount =  document.getElementById('add6').value;
+var price =  document.getElementById('price').value;
+var total = price * amount;
+document.getElementById("money").value=total;
 }
 
-}
+
 function hidePopup()
 {
-var no = document.getElementById('go');
-no.style.visibility = "hidden";
 document.getElementById("add").selectedIndex = "";
 document.getElementById("add1").selectedIndex = "0";
 document.getElementById("add2").selectedIndex = "0";
@@ -208,50 +205,63 @@ document.getElementById("add3").selectedIndex = "0";
 document.getElementById("add4").selectedIndex = "0";
 document.getElementById("add5").selectedIndex = "0";
 document.getElementById("add6").selectedIndex = "0";
+document.getElementById("price").innerHTML="";
 }
 
 function del(item) {
-  item.parentElement.parentElement.parentElement.parentElement.remove();
+  item.parentElement.parentElement.parentElement.remove();
+  var Original = document.getElementById('Sidebar').innerHTML;
+  var booking = document.getElementById('Sidebar1');
+  if(Original == ""){
+    document.getElementById('la').style.display="none";
+  }
 }
+
+
 
 function ShoppingCart(obj)
 {
+var total = document.getElementById("money").value;
+var a = document.getElementById("bill").innerHTML;
 var buy = document.getElementById('Sidebar');
 var Original =document.getElementById('Sidebar').innerHTML;
 var booking = document.getElementById('Sidebar1');
-if (book == null)
+if (book == null || Original == "")
 {         
  i=i+1
  book=book+1;
-　var parent = document.getElementById(obj);   
+var parent = document.getElementById(obj);   
 var div = document.createElement("div");//新增 div
-    
 
 div.setAttribute("id", i);//設定 div id
-div.innerHTML ="<table><tr>"
-　+"<td><input type=\"text\" name=\"a[]\" value="+document.getElementById('add').value+" style=\"width:195px;outline:none;;border:none;font-size:23.6px\" readonly=\"readonly\"></td>"
-  +"<td><input type=\"button\" onclick=\"del(this)\"value=\"x\" style=\"float:right\"></td>"
+div.innerHTML="<table class=\"table\"><tr>"
+　+"<td><input type=\"text\" size=\"6\" name=\"a[]\" value="+document.getElementById('add').value+" style=\"outline:none;;border:none;font-size:23.6px\" readonly=\"readonly\"></td>"
+  +"<td class=\"text-right\"><a onclick=\"del(this)\" value=\"x\" style=\"width:20px\"><i class=\"fas fa-times-circle\"></i></a></td>"
 +"</tr><tr>"
- +"<td colspan=\"2\"><img src=\"images/1.jpg\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
+ +"<td colspan=\"2\"><img src=\"images/1.png\" class=\"img-fluid\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  　+"<td>飯量</td>"
- +"<td><input type=\"text\" name=\"b[]\" value="+document.getElementById('add1').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+ +"<td><input type=\"text\" size=\"3\" name=\"b[]\" value="+document.getElementById('add1').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  　+"<td >滷汁</td>"
- +"<td><input type=\"text\" name=\"c[]\" value="+document.getElementById('add2').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+ +"<td><input type=\"text\" size=\"3\" name=\"c[]\" value="+document.getElementById('add2').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  　+"<td >加料</td>"
- +"<td><input type=\"text\" name=\"d[]\" value="+document.getElementById('add3').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+ +"<td><input type=\"text\" size=\"3\" name=\"d[]\" value="+document.getElementById('add3').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  　+"<td>加辣</td>"
- +"<td ><input type=\"text\" name=\"e[]\" value="+document.getElementById('add4').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+ +"<td ><input type=\"text\" size=\"3\" name=\"e[]\" value="+document.getElementById('add4').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  　+"<td>是否要切</td>"
- +"<td> <input type=\"text\" name=\"f[]\" value="+document.getElementById('add5').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+ +"<td> <input type=\"text\" size=\"3\" name=\"f[]\" value="+document.getElementById('add5').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  +"<td>數量</td>"
- +"<td><input type=\"text\" name=\"g[]\"  value="+document.getElementById('add6').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td></div>";
- parent.appendChild(div);
+ +"<td><input type=\"text\" size=\"2\" name=\"g[]\"  value="+document.getElementById('add6').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+ +"</tr><tr>"
+ +"<td>小計</td>"
+ +"<td><input type=\"text\" size=\"6\" name=\"h[]\" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\" value="+document.getElementById('money').value+"></td></tr></table>";
+
+parent.appendChild(div);
 document.getElementById('la').style.display="block";
 document.getElementById("add").selectedIndex = "";
 document.getElementById("add1").selectedIndex = "0";
@@ -260,6 +270,8 @@ document.getElementById("add3").selectedIndex = "0";
 document.getElementById("add4").selectedIndex = "0";
 document.getElementById("add5").selectedIndex = "0";
 document.getElementById("add6").selectedIndex = "0";
+document.getElementById("bill").innerHTML=total;
+document.getElementById("total").value=document.getElementById("bill").innerHTML;
 　}
 else
 {
@@ -271,30 +283,33 @@ else
           
   //設定 div 屬性，如 id
   div.setAttribute("id", i);
-          
-  div.innerHTML ="<table><tr>"
-  　+"<td><input type=\"text\" name=\"a[]\" value="+document.getElementById('add').value+" style=\"width:195px;outline:none;;border:none;font-size:23.6px\" readonly=\"readonly\"></td>"
-  +"<td><input type=\"button\" onclick=\"del(this)\"value=\"x\"style=\"float:right\"></td>"
+  div.setAttribute("class",'container');//設定div class
+  div.innerHTML="<table class=\"table \"><tr>"
+  　+"<td><input type=\"text\" size=\"6\" name=\"a[]\" value="+document.getElementById('add').value+" style=\"outline:none;;border:none;font-size:23.6px\" readonly=\"readonly\"></td>"
+    +"<td class=\"text-right\"><a onclick=\"del(this)\" value=\"x\" style=\"width:20px\"><i class=\"fas fa-times-circle\"></i></a></td>"
   +"</tr><tr>"
-   +"<td colspan=\"2\"><img src=\"images/1.jpg\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
+   +"<td colspan=\"2\"><img src=\"images/1.png\" class=\"img-fluid\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    　+"<td>飯量</td>"
-   +"<td><input type=\"text\" name=\"b[]\" value="+document.getElementById('add1').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+   +"<td><input type=\"text\" size=\"3\" name=\"b[]\" value="+document.getElementById('add1').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    　+"<td >滷汁</td>"
-   +"<td><input type=\"text\" name=\"c[]\" value="+document.getElementById('add2').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+   +"<td><input type=\"text\" size=\"3\" name=\"c[]\" value="+document.getElementById('add2').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    　+"<td >加料</td>"
-   +"<td><input type=\"text\" name=\"d[]\" value="+document.getElementById('add3').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+   +"<td><input type=\"text\" size=\"3\" name=\"d[]\" value="+document.getElementById('add3').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    　+"<td>加辣</td>"
-   +"<td ><input type=\"text\" name=\"e[]\" value="+document.getElementById('add4').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+   +"<td ><input type=\"text\" size=\"3\" name=\"e[]\" value="+document.getElementById('add4').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    　+"<td>是否要切</td>"
-   +"<td> <input type=\"text\" name=\"f[]\" value="+document.getElementById('add5').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+   +"<td> <input type=\"text\" size=\"3\" name=\"f[]\" value="+document.getElementById('add5').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    +"<td>數量</td>"
-   +"<td><input type=\"text\" name=\"g[]\"  value="+document.getElementById('add6').value+" style=\"width:150px;ooutline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td></div>";
+   +"<td><input type=\"text\" size=\"2\" name=\"g[]\"  value="+document.getElementById('add6').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
+   +"</tr><tr>"
+   +"<td>總金額</td>"
+   +"<td><input type=\"text\" size=\"6\" name=\"h[]\" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\" value="+document.getElementById('money').value+"></td></tr></table>";
    parent.appendChild(div);
  document.getElementById("add1").selectedIndex = "0";
  document.getElementById("add2").selectedIndex = "0";
@@ -302,9 +317,25 @@ else
  document.getElementById("add4").selectedIndex = "0";
  document.getElementById("add5").selectedIndex = "0";
  document.getElementById("add6").selectedIndex = "0";
+ document.getElementById("bill").innerHTML=Number(a)+Number(total);
+ document.getElementById("total").value= Number(a)+Number(total);
 }
 }
+function on()
+{
+if (baseText1 == null) 
+{
+  
+baseText = 1;
+document.getElementById("add").value="滷肉便當";
+var amount =  document.getElementById('add6').value;
+document.getElementById('price').value = 60;
+var price = document.getElementById('price').value
+var total = price * amount;
+document.getElementById("money").value=total;
 
+}
+}
 function on1()
 {
 if (baseText1 == null) 
@@ -312,8 +343,11 @@ if (baseText1 == null)
 	
 baseText = 1;
 document.getElementById("add").value="特製便當";
-var sbar = document.getElementById('statusbar1');
-sbar.style.marginTop = "10px";
+var amount =  document.getElementById('add6').value;
+document.getElementById('price').value = 80;
+var price = document.getElementById('price').value
+var total = price * amount;
+document.getElementById("money").value=total;
 }
 }
 
@@ -324,8 +358,11 @@ function on2()
     
   baseText = 1;
   document.getElementById("add").value="花枝捲飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 
@@ -336,8 +373,11 @@ function on3()
     
   baseText = 1;
   document.getElementById("add").value="蝦捲飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+document.getElementById("money").value=total;
   }
   }
 
@@ -348,8 +388,11 @@ function on4()
     
   baseText = 1;
   document.getElementById("add").value="滷排骨飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 80;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+document.getElementById("money").value=total;
   }
   }
 function on5()
@@ -359,8 +402,11 @@ function on5()
     
   baseText = 1;
   document.getElementById("add").value="炸雞腿飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 function on6()
@@ -370,8 +416,11 @@ function on6()
     
   baseText = 1;
   document.getElementById("add").value="鱈魚飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 100;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 
@@ -382,8 +431,11 @@ function on7()
     
   baseText = 1;
   document.getElementById("add").value="炸排骨飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 80;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 
@@ -394,8 +446,11 @@ function on8()
     
   baseText = 1;
   document.getElementById("add").value="香雞排飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 
@@ -406,8 +461,11 @@ function on9()
     
   baseText = 1;
   document.getElementById("add").value="雙捲飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 
@@ -418,8 +476,11 @@ function on10()
     
   baseText = 1;
   document.getElementById("add").value="三寶飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }
 
@@ -430,7 +491,10 @@ function on11()
     
   baseText = 1;
   document.getElementById("add").value="招牌飯";
-  var sbar = document.getElementById('statusbar1');
-  sbar.style.marginTop = "10px";
+  var amount =  document.getElementById('add6').value;
+  document.getElementById('price').value = 85;
+  var price = document.getElementById('price').value
+  var total = price * amount;
+  document.getElementById("money").value=total;
   }
   }

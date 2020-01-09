@@ -23,11 +23,13 @@
 	<section id="intro">
 		<div class="container">
 		  <div class="navbar navbar-expand-md">
-		  <img src="images/logo1.png" class="img-fluid" alt="logo">
+			<a class="navbar-brand" href="#">
+			  <img src="images/logo.png" alt="logo" style="width:130px;">
+			</a> 
 		  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 		  <span class="fas fa-bars"></span>
 		  </button>
-		  <div class="collapse navbar-collapse " id="collapsibleNavbar">
+				<div class="collapse navbar-collapse " id="collapsibleNavbar">
 			<ul class="navbar-nav ">
 				<a class="navbar-brand" href="index.html"></a>
 			<ul class="navbar-nav ">
@@ -40,11 +42,12 @@
 			  <li>
 			</ul>
 		  </div>  
+		  </div>
 		</div>
-	  </section>	
+	</section>	
 
 	<section id="booking-second" style="background-image: url('images/bg.jpg')";>
-		<div class="container">
+		<div  class="container">
 			<form name="theForm" method="post" action="booking.php">
 					<div class="row justify-content-center">
 						<h2>請輸入訂購資料</h2>
@@ -60,16 +63,16 @@
 					</div></br>
 					<label>取餐時間:</label>
 					<div class="form-inline">
-						<input type="text" class="form-control"  name="time" placeholder="請先選擇日期" required id="datepicker" onchange="a()">
+						<input type="text" class="form-control"  name="time" required id="datepicker" onchange="a()">
 						<select id="ti" name="ti" required class="form-control" ></select>
 					</div>
 					<label for="usr">姓名:</label>
-					<input type="text" class="form-control" name="username" placeholder="姓名" required>
-					<label for="tel">電話:</label>
-					<input type="tel" class="form-control" pattern="(\d{4}-\d{6})" placeholder="請輸入行動電話號碼" title="例:0987-654321" name="usertel" size="30" required>
+					<input type="text" class="form-control" name="username"  required>
+					<label for="tel">手機:</label>
+					<input type="tel" class="form-control" pattern="(\d{4}-\d{6})" placeholder="手機號碼" title="例:0987-654321" name="usertel" size="30" required>
 				
 					<label>電子郵件:</label>
-					<input type="email" name="usermail" class="form-control"  placeholder="請輸入電子郵件" required>
+					<input type="email" name="usermail" class="form-control"   required>
 					<div id="demo">
 					<label>外送地址:</label>
 							
@@ -96,16 +99,16 @@
 	<footer>
 		<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-lg-4">
 				<img class="img-fluid" src="images/logo1.png">
 			</div>
-			<div class="col-md-4">
+			<div class="col-lg-4">
 				<h3>連結</h3>
 				<a href="index.html">關於龍品</a>
 				<a href="product.html">產品介紹</a>
 				<a href="booking.html">線上訂餐</a>
 			</div>
-			<div class="col-md-4">
+			<div class="col-lg-4">
 				<h3>聯絡我們</h3>
 				<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
 			</div>
