@@ -447,6 +447,9 @@ footer a{
 #bk-second .modal-header input{
 	outline:none;border:none;
 }
+#bk-second .col-lg img{
+	padding: 2em;
+}
 
 #side1 h2{
 	font-family: cwTeXYen,sans-serif;
