@@ -28,7 +28,7 @@ $address=$_POST["address"];
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="1.js"></script>
+<script src="scripts/1.js"></script>
 <title>線上訂餐</title>
 
 </head>
@@ -67,7 +67,7 @@ $address=$_POST["address"];
         <div id="bk-second-menu" class="col-lg-9  text-center">
         <img id="menu-img" class="img-fluid" src="images\menu.png">
         <div class="row text-center">
-          <div class="col-lg-4">  
+          <div class="col-lg">  
             <img src="images\1.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
@@ -82,8 +82,8 @@ $address=$_POST["address"];
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <img src="images\1.png" class="img-fluid pic">
+          <div class="col-lg">
+            <img src="images\2.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>特製便當</h4>
@@ -97,8 +97,8 @@ $address=$_POST["address"];
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <img src="images\1.png" class="img-fluid pic">
+          <div class="col-lg">
+            <img src="images\3.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>花枝捲飯</h4>
@@ -115,7 +115,7 @@ $address=$_POST["address"];
 
         <div class="row  text-center">
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\4.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>蝦捲飯</h4>
@@ -130,7 +130,7 @@ $address=$_POST["address"];
           </div>
 
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\5.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>滷排骨飯</h4>
@@ -145,7 +145,7 @@ $address=$_POST["address"];
           </div>
 
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\6.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>炸雞腿飯</h4>
@@ -162,7 +162,7 @@ $address=$_POST["address"];
 
         <div class="row  text-center">
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\7.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>鱈魚飯</h4>
@@ -177,7 +177,7 @@ $address=$_POST["address"];
           </div>
 
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\8.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>炸排骨飯</h4>
@@ -192,7 +192,7 @@ $address=$_POST["address"];
           </div>
 
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\9.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>香雞排飯</h4>
@@ -209,7 +209,7 @@ $address=$_POST["address"];
 
         <div class="row  text-center">
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\10.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>雙捲飯</h4>
@@ -224,7 +224,7 @@ $address=$_POST["address"];
           </div>
 
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\11.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>三寶飯</h4>
@@ -239,7 +239,7 @@ $address=$_POST["address"];
           </div>
 
           <div class="col-lg">
-            <img src="images\1.png" class="img-fluid pic">
+            <img src="images\12.png" class="img-fluid pic">
             <div class="row">
             <div class="col-lg">
             <h4>招牌飯</h4>
@@ -323,10 +323,11 @@ $address=$_POST["address"];
             </div>
             <div class="col-lg-6">
             <input type="text" class="form-control " size="6"  readonly="readonly" id="money" name="money" style="background-color:white">
-            <input type="text" id="price" class="d-none ">
+            <input type="text" id="price" class="d-none">
+            <input type="text" id="pic" class="d-none">
             </div>
             <div class="col-lg-12">
-          <button type="button" class="btn bg-primary text-white" data-dismiss="modal" onclick="ShoppingCart('Sidebar');">加入購物車</button>
+            <button type="button" class="btn bg-primary text-white" data-dismiss="modal" onclick="ShoppingCart('Sidebar');">加入購物車</button>
             </div> 
             </div>
             </div>
