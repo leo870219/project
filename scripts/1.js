@@ -1,16 +1,4 @@
-var baseText = null;
-var baseText = null;
 var baseText1 = null;
-var baseText2 = null;
-var baseText3 = null;
-var baseText4 = null;
-var baseText5 = null;
-var baseText6 = null;
-var baseText7 = null;
-var baseText8 = null;
-var baseText9 = null;
-var baseText10 = null;
-var baseText11 = null;
 var book = null;
 var i=0;
 
@@ -238,7 +226,7 @@ div.innerHTML="<table class=\"table\"><tr>"
 　+"<td><input type=\"text\" size=\"6\" name=\"a[]\" value="+document.getElementById('add').value+" style=\"outline:none;;border:none;font-size:23.6px\" readonly=\"readonly\"></td>"
   +"<td class=\"text-right\"><a onclick=\"del(this)\" value=\"x\" style=\"width:20px\"><i class=\"fas fa-times-circle\"></i></a></td>"
 +"</tr><tr>"
- +"<td colspan=\"2\"><img src=\"images/1.png\" class=\"img-fluid\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
+ +"<td colspan=\"2\"><img src=\"images/"+pic.value+".png\" class=\"img-fluid\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
  +"</tr><tr>"
  　+"<td>飯量</td>"
  +"<td><input type=\"text\" size=\"3\" name=\"b[]\" value="+document.getElementById('add1').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
@@ -288,7 +276,7 @@ else
   　+"<td><input type=\"text\" size=\"6\" name=\"a[]\" value="+document.getElementById('add').value+" style=\"outline:none;;border:none;font-size:23.6px\" readonly=\"readonly\"></td>"
     +"<td class=\"text-right\"><a onclick=\"del(this)\" value=\"x\" style=\"width:20px\"><i class=\"fas fa-times-circle\"></i></a></td>"
   +"</tr><tr>"
-   +"<td colspan=\"2\"><img src=\"images/1.png\" class=\"img-fluid\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
+   +"<td colspan=\"2\"><img src=\"images/"+pic.value+".png\" class=\"img-fluid\" style=\"width:350px; height:185px;\"readonly=\"readonly\"></td>"
    +"</tr><tr>"
    　+"<td>飯量</td>"
    +"<td><input type=\"text\" size=\"3\" name=\"b[]\" value="+document.getElementById('add1').value+" style=\"outline:none;border:none;float:right;text-align:right\"readonly=\"readonly\"></td>"
@@ -333,6 +321,7 @@ document.getElementById('price').value = 60;
 var price = document.getElementById('price').value
 var total = price * amount;
 document.getElementById("money").value=total;
+document.getElementById("pic").value="1";
 
 }
 }
@@ -348,6 +337,7 @@ document.getElementById('price').value = 80;
 var price = document.getElementById('price').value
 var total = price * amount;
 document.getElementById("money").value=total;
+document.getElementById("pic").value="2";
 }
 }
 
@@ -363,6 +353,7 @@ function on2()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="3";
   }
   }
 
@@ -378,6 +369,7 @@ function on3()
   var price = document.getElementById('price').value
   var total = price * amount;
 document.getElementById("money").value=total;
+document.getElementById("pic").value="4";
   }
   }
 
@@ -393,6 +385,7 @@ function on4()
   var price = document.getElementById('price').value
   var total = price * amount;
 document.getElementById("money").value=total;
+document.getElementById("pic").value="5";
   }
   }
 function on5()
@@ -407,6 +400,7 @@ function on5()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="6";
   }
   }
 function on6()
@@ -421,6 +415,7 @@ function on6()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="7";
   }
   }
 
@@ -436,6 +431,7 @@ function on7()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="8";
   }
   }
 
@@ -451,6 +447,7 @@ function on8()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="9";
   }
   }
 
@@ -466,6 +463,7 @@ function on9()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="10";
   }
   }
 
@@ -481,6 +479,7 @@ function on10()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="11";
   }
   }
 
@@ -496,5 +495,6 @@ function on11()
   var price = document.getElementById('price').value
   var total = price * amount;
   document.getElementById("money").value=total;
+  document.getElementById("pic").value="12";
   }
   }
