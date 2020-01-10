@@ -20,7 +20,7 @@ $address=$_POST["address"];
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="1.js"></script>
+<script src="scripts/1.js"></script>
 <title>線上訂餐</title>
 </head>
 
