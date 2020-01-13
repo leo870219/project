@@ -21,7 +21,6 @@ function a(){                   //將可訂購時間丟入陣列，當使用者�
 	var day = new Array(31);
 	var hour = new Array(24);
 	var min = new Array(60);
-	var a =0;
 	var abc=new Array('09:30','09:35','09:40','09:45','09:50','09:55'
 	,'10:00','10:05','10:10','10:15','10:20','10:25','10:30','10:35','10:40','10:45','10:50','10:55'
 	,'11:00','11:05','11:10','11:15','11:20','11:25','11:30','11:35','11:40','11:45','11:50','11:55'
@@ -35,10 +34,7 @@ function a(){                   //將可訂購時間丟入陣列，當使用者�
 	,'19:00','19:05','19:10','19:15','19:20','19:25','19:30','19:35','19:40','19:45','19:50','19:55'
 	,'20:00','20:05','20:10','20:15','20:20','20:25','20:30'
 )
-	
-	
-	var a=document.getElementById('datepicker');
-	var b=a.value;
+	var b=document.getElementById('datepicker').value;
 	var NewArray = new Array();
 	var NewArray = b.split( "-" , 3 );
 	if (NewArray[2] == dt.getDate() && dt.getHours()>9 && dt.getHours()<20 && dt.getMinutes()<15 && dt.getMinutes()>=0){  //判斷訂購日期是否為今日訂購以及是否在可訂購時間內，並設定至少30分鐘後取餐
@@ -86,13 +82,12 @@ function a(){                   //將可訂購時間丟入陣列，當使用者�
 		}
 	}
 		else {
-		alert('請在早上9點後及晚上8點前訂購哦~');
+    alert('請在早上9點後及晚上8點前訂購哦~');
+    document.getElementById('datepicker').value=null;
+    document.getElementById('ti').value=null;
 		}
 	}
-function node(name, child){
-this.name=name;
-this.child=child;
-}
+
 	
 function delivery(){
 document.getElementById('demo').style.display="block";
@@ -109,7 +104,12 @@ document.getElementById('column2').required=false;
 document.getElementById('column3').required=false;
 document.getElementById('address').required=false;
 } 
-	
+  
+function node(name, child){
+  this.name=name;
+  this.child=child;
+  }
+
 function dataHierarchy(){
 // 地區
 var area=new Array();
@@ -205,13 +205,10 @@ function del(item) {
   }
 }
 
-
-
 function ShoppingCart(obj)
 {
 var total = document.getElementById("money").value;
 var a = document.getElementById("bill").innerHTML;
-var buy = document.getElementById('Sidebar');
 var Original =document.getElementById('Sidebar').innerHTML;
 var booking = document.getElementById('Sidebar1');
 if (book == null || Original == "")
@@ -309,192 +306,13 @@ else
  document.getElementById("total").value= Number(a)+Number(total);
 }
 }
-function on()
+function on(item)
 {
-if (baseText1 == null) 
-{
-  
-baseText = 1;
-document.getElementById("add").value="滷肉便當";
-var amount =  document.getElementById('add6').value;
-document.getElementById('price').value = 60;
-var price = document.getElementById('price').value
-var total = price * amount;
-document.getElementById("money").value=total;
-document.getElementById("pic").value="1";
-
+document.getElementById("add").value=(item.parentNode.parentNode.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.firstChild.innerHTML);
+document.getElementById('price').value=item.parentNode.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.firstChild.innerHTML;
+document.getElementById("pic").value=item.parentNode.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling.lastChild.innerHTML;
+ var amount =  document.getElementById('add6').value;
+ var price = document.getElementById('price').value;
+ var total = price * amount;
+ document.getElementById("money").value=total;
 }
-}
-function on1()
-{
-if (baseText1 == null) 
-{
-	
-baseText = 1;
-document.getElementById("add").value="特製便當";
-var amount =  document.getElementById('add6').value;
-document.getElementById('price').value = 80;
-var price = document.getElementById('price').value
-var total = price * amount;
-document.getElementById("money").value=total;
-document.getElementById("pic").value="2";
-}
-}
-
-function on2()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="花枝捲飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="3";
-  }
-  }
-
-function on3()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="蝦捲飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-document.getElementById("money").value=total;
-document.getElementById("pic").value="4";
-  }
-  }
-
-function on4()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="滷排骨飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 80;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-document.getElementById("money").value=total;
-document.getElementById("pic").value="5";
-  }
-  }
-function on5()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="炸雞腿飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="6";
-  }
-  }
-function on6()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="鱈魚飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 100;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="7";
-  }
-  }
-
-function on7()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="炸排骨飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 80;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="8";
-  }
-  }
-
-function on8()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="香雞排飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="9";
-  }
-  }
-
-function on9()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="雙捲飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="10";
-  }
-  }
-
-function on10()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="三寶飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="11";
-  }
-  }
-
-function on11()
-{
-  if (baseText1 == null) 
-  {
-    
-  baseText = 1;
-  document.getElementById("add").value="招牌飯";
-  var amount =  document.getElementById('add6').value;
-  document.getElementById('price').value = 85;
-  var price = document.getElementById('price').value
-  var total = price * amount;
-  document.getElementById("money").value=total;
-  document.getElementById("pic").value="12";
-  }
-  }

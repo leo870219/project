@@ -66,49 +66,39 @@ $address=$_POST["address"];
 
         <div id="bk-second-menu" class="col-lg-9  text-center">
         <img id="menu-img" class="img-fluid" src="images\menu.png">
+        
         <div class="row text-center">
+
           <div class="col-lg">  
             <img src="images\1.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>滷肉便當</h4>
-            </div>
-            <div class="col-lg">
-            <h4>60元</h4>
-            </div>
+            <div class="col-lg"><h4>滷肉便當</h4></div>
+            <div class="d-none"><p>60</p><p>1</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>
           </div>
 
           <div class="col-lg">
             <img src="images\2.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>特製便當</h4>
-            </div>
-            <div class="col-lg">
-            <h4>80元</h4>
-            </div>
+            <div class="col-lg"><h4>特製便當</h4></div>
+            <div class="d-none"><p>80</p><p>2</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on1()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>
           </div>
 
           <div class="col-lg">
             <img src="images\3.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>花枝捲飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>花枝捲飯</h4></div>
+            <div class="d-none"><p>85</p><p>3</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on2()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>
           </div>
         </div>
@@ -117,45 +107,33 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\4.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>蝦捲飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>蝦捲飯</h4></div>
+            <div class="d-none"><p>85</p><p>4</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on3()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>
           </div>
 
           <div class="col-lg">
             <img src="images\5.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>滷排骨飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>80元</h4>
-            </div>
+            <div class="col-lg"><h4>滷排骨飯</h4></div>
+            <div class="d-none"><p>80</p><p>5</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on4()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>
           </div>
 
           <div class="col-lg">
             <img src="images\6.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>炸雞腿飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>炸雞腿飯</h4></div>
+            <div class="d-none"><p>85</p><p>6</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on5()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>          
           </div>
         </div>
@@ -164,45 +142,33 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\7.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>鱈魚飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>100元</h4>
-            </div>
+            <div class="col-lg"><h4>鱈魚飯</h4></div>
+            <div class="d-none"><p>100</p><p>7</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on6()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>
           </div>
 
           <div class="col-lg">
             <img src="images\8.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>炸排骨飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>80元</h4>
-            </div>
+            <div class="col-lg"><h4>炸排骨飯</h4></div>
+            <div class="d-none"><p>80</p><p>8</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on7()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>          
           </div>
 
           <div class="col-lg">
             <img src="images\9.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>香雞排飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>香雞排飯</h4></div>
+            <div class="d-none"><p>85</p><p>9</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on8()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>          
           </div>
         </div>
@@ -211,45 +177,33 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\10.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>雙捲飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>雙捲飯</h4></div>
+            <div class="d-none"><p>85</p><p>10</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on9()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>          
           </div>
 
           <div class="col-lg">
             <img src="images\11.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>三寶飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>三寶飯</h4></div>
+            <div class="d-none"><p>85</p><p>11</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on10()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>          
           </div>
 
           <div class="col-lg">
             <img src="images\12.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg">
-            <h4>招牌飯</h4>
-            </div>
-            <div class="col-lg">
-            <h4>85元</h4>
-            </div>
+            <div class="col-lg"><h4>招牌飯</h4></div>
+            <div class="d-none"><p>85</p><p>12</p></div>
             </div>
             <div class="row justify-content-center">
-            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on11()"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
+            <a class="btn bg-success text-white" data-toggle="modal" data-target="#go"  onclick="on(this)"><i class="fas fa-shopping-cart"></i>請選擇點餐</a>
             </div>          
           </div>
         </div>
