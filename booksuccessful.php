@@ -82,7 +82,7 @@ if ($db_link->connect_error!="") {
 else{
 	$db_link->query("set names'utf8'");
 
-	$sql="INSERT INTO order1 (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g','$total')";
+	$sql="INSERT INTO list (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g','$total')";
 
 	if ($db_link->query($sql) === TRUE) {
 

@@ -3,7 +3,7 @@
 	include("connMysqlObj.php");
 	$seldb = @mysqli_select_db($db_link, "mydb");
 	if (!$seldb) die("資料庫選擇失敗！");
-	$sql_query = "SELECT * FROM order1";
+	$sql_query = "SELECT * FROM list";
 	$result = mysqli_query($db_link, $sql_query);
 	$total_records = mysqli_num_rows($result);
 ?>
