@@ -1,9 +1,9 @@
 <?php
-	include("connMysqlObj.php");
+    include("connMysqlObj.php");
 	if(isset($_POST["action"])&&($_POST["action"]=="update")){
-		$sql_query = "UPDATE order1 SET Name=?,Phone=?,Takeway=?,Date=?,Time=?,Address=?,Mail=?,Meals=?,Size=?,Marinade=?,Ad=?,Spicy=?,Cut=?,Amount=?Total=? WHERE cNumber=?";
+		$sql_query = "UPDATE order1 SET Name=?,Phone=?,Takeway=?,Date=?,Time=?,Address=?,Mail=?,Meals=?,Size=?,Marinade=?,Ad=?,Spicy=?,Cut=?,Amount=?,Total=? WHERE cNumber=?";
 		$stmt = $db_link -> prepare($sql_query);
-		$stmt -> bind_param("ssssssssssssssi", $_POST["Name"], $_POST["Phone"], $_POST["Takeway"], $_POST["Date"], $_POST["Time"], $_POST["Address"], $_POST["Mail"], $_POST["Meals"], $_POST["Size"], $_POST["Marinade"], $_POST["Ad"], $_POST["Spicy"], $_POST["Cut"], $_POST["Amount"],$_POST["Total"],$_POST["cNumber"]);
+		$stmt -> bind_param("sssssssssssssssi", $_POST["Name"], $_POST["Phone"], $_POST["Takeway"], $_POST["Date"], $_POST["Time"], $_POST["Address"], $_POST["Mail"], $_POST["Meals"], $_POST["Size"], $_POST["Marinade"], $_POST["Ad"], $_POST["Spicy"], $_POST["Cut"], $_POST["Amount"],$_POST["Total"],$_POST["cNumber"]);
 		$stmt -> execute();
 		$stmt -> close();
 		$db_link -> close();
@@ -39,8 +39,8 @@
     </tr>
     <tr>
       <td>取餐方式</td><td>
-          <input type="radio" onclick="delivery()" name="Takeway"  value="delivery" <?php if($Takeway=="外送") echo "checked";?>> 外送
-	      <input type="radio" onclick="takeout()" name="Takeway" value="takeout" <?php if($Takeway=="外帶") echo "checked"?>>外帶</td>
+          <input type="radio" onclick="delivery()" name="Takeway"  value="外送" <?php if($Takeway=="外送") echo "checked";?>> 外送
+	      <input type="radio" onclick="takeout()" name="Takeway" value="外帶" <?php if($Takeway=="外帶") echo "checked"?>>外帶</td>
     </tr>
     <tr>
       <td>取餐日期</td><td><input type="text" name="Date" id="Date" value="<?php echo $Date;?>"></td>
