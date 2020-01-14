@@ -73,9 +73,9 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $db_name="mydb";
-// Create connection
+
 $db_link = new mysqli($servername, $username, $password,$db_name);
-// Check connection
+
 if ($db_link->connect_error!="") {
     echo" 連接失敗 " ;
 }
