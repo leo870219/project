@@ -1,7 +1,7 @@
 <?php 
 if(isset($_POST["action"])&&($_POST["action"]=="add")){
 	include("connMysqlObj.php");
-  $sql_query = "INSERT INTO order1 (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES (?, ?, ?, ? ,? ,?, ?, ?, ? ,? ,?,?,?,?)";
+  $sql_query = "INSERT INTO list (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES (?, ?, ?, ? ,? ,?, ?, ?, ? ,? ,?,?,?,?)";
 	$stmt = $db_link -> prepare($sql_query);
 	$stmt -> bind_param("ssssssssssssss", $_POST["Name"], $_POST["Phone"], $_POST["Takeway"], $_POST["Date"], $_POST["Time"], $_POST["Address"], $_POST["Mail"], $_POST["Meals"], $_POST["Size"], $_POST["Marinade"], $_POST["Ad"], $_POST["Spicy"], $_POST["Cut"], $_POST["Amount"], $_POST["Total"]);
 	$stmt -> execute();
