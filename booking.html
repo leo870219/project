@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/css.css"/>
+<link rel="stylesheet" href="styles/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="scripts/1.js"></script>
+<script src="https://kit.fontawesome.com/c3595a1670.js" crossorigin="anonymous"></script>
+<title>線上訂餐</title>
+
+</head>
+<body>
+	<section id="intro">
+		<div class="container">
+		  <div class="navbar navbar-expand-md">
+			<a class="navbar-brand" href="#">
+			  <img src="images/logo.png" alt="logo" style="width:130px;">
+			</a> 
+		  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="fas fa-bars"></span>
+		  </button>
+				<div class="collapse navbar-collapse " id="collapsibleNavbar">
+			<ul class="navbar-nav ">
+				<a class="navbar-brand" href="index.html"></a>
+			<ul class="navbar-nav ">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">關於龍品</a></li>
+			  <li class="nav-item">
+				<a class="nav-link" href="product.html">產品介紹</a></li>
+			  <li class="nav-item">
+				<a class="nav-link" href="booking.html" >線上訂餐</a>
+			  <li>
+			</ul>
+		  </div>  
+		  </div>
+		</div>
+	</section>	
+
+	<section id="booking-second" style="background-image: url('images/bg.jpg')";>
+		<div  class="container">
+			<form name="theForm" method="post" action="booking.php">
+					<div class="row justify-content-center">
+						<h2>請輸入訂購資料</h2>
+					</div>
+					<label>取餐方式:</label>
+					<div class="form-check-inline ">
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input"  onclick="delivery()" name="takeway"  value="delivery"required>外送
+						</label>
+						<label class="form-check-label">
+						<input type="radio" class="form-check-input" onclick="takeout()" name="takeway" value="takeout">外帶
+						</label>
+					</div></br>
+					<label>取餐時間:</label>
+					<div class="form-inline">
+						<input type="text" class="form-control"  name="time" required id="datepicker" onchange="a()">
+						<select id="ti" name="ti" required class="form-control" ></select>
+					</div>
+					<label for="usr">姓名:</label>
+					<input type="text" class="form-control" name="username"  required>
+					<label for="tel">手機:</label>
+					<input type="tel" class="form-control" pattern="(\d{4}-\d{6})" placeholder="手機號碼" title="例:0987-654321" name="usertel" size="30" required>
+				
+					<label>電子郵件:</label>
+					<input type="email" name="usermail" class="form-control"   required>
+					<div id="demo" style="display: none;">
+					<label>外送地址:</label>
+							
+								<select class="form-control" name="column1" id="column1" size=1  placeholder="請輸入電子郵件" onclick="onChangeColumn1()">
+								<option value="" style="display: none">請先選擇縣市</option>
+								<script>
+								for (i=1; i<dataTree.length; i++)
+								document.writeln("<option value=\""+dataTree[i].name+"\">"+dataTree[i].name);
+								</script>
+								</select>
+								<select class="form-control" name="column2" id="column2" size=1 onclick="onChangeColumn2()">
+								</select>
+								<select class="form-control" name="column3" id="column3" size=1 onclick="onChangeColumn3()">
+								</select>
+								<input class="form-control" type="text" id="address" name="address"placeholder="外送地址">
+								<input type="hidden" name="path">
+							</div>
+					<button type="submit" class="btn btn-primary">選擇餐點</button>
+			</form>
+		</div>
+	</section>
+
+<section id="latest">
+	<footer>
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<img class="img-fluid" src="images/logo1.png">
+			</div>
+			<div class="col-lg-4">
+				<h3>連結</h3>
+				<a href="index.html">關於龍品</a>
+				<a href="product.html">產品介紹</a>
+				<a href="booking.html">線上訂餐</a>
+			</div>
+			<div class="col-lg-4">
+				<h3>聯絡我們</h3>
+				<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+			</div>
+		</div>
+</footer>
+</section>
+
+</body>
+</html>
