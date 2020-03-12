@@ -1,0 +1,492 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+p,b,a,input,label,span,ul,li{
+font-family: cwTeXYen,sans-serif;
+font-size: 25px;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-family: cwTeXYen,sans-serif;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+    border: 0;
+	border-top: 2px solid #eee;
+    padding: 0;
+}
+
+/* Buttons styles */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="submit"].btn,
+button.btn {
+	cursor: pointer;
+}
+
+a.btn,.btn {
+   margin-right: 1em;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 5px;
+	border: 1px solid;
+	transition: all 0.2s ease;
+	width:100%;
+	height: 100%;
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+}
+/* Radius */
+.btn-radius {
+  border-radius: 300px;
+}
+/* Sizes */
+.btn-small {
+	font-size: 0.8125em;
+	padding: 0.4125em 1.25em;
+}
+.btn-medium {
+	font-size: 20px;
+	padding: 0.5375em 1.375em;
+}
+.btn-large {
+	font-size: 1.0625em;
+	padding: 0.5625em 1.5em;
+}
+
+/* Colors */
+.btn-green:hover {
+  background: #3CB371;
+  color: #fff;
+  border-color: #3CB371;		
+}
+
+.btn-blue:hover {
+  background: #4682B4;
+  color: #fff;
+  border-color: #4682B4;		
+}
+
+.btn-orange:hover {
+  background: #FF8C00;
+  color: #fff;
+  border-color: #FF8C00;	
+}
+.btn-red:hover {
+  background: #B22222;
+  color: #fff;
+  border-color: #B22222;	
+}
+
+.btn-maroon:hover {
+  background: #800000;
+  color: #fff;
+  border-color: #800000;	
+}
+
+.btn-fuchsia:hover {
+  background: #FF00FF;
+  color: #fff;
+  border-color: #FF00FF;	
+}
+
+.btn-indigo:hover {
+  background: #4B0082;
+  color: #fff;
+  border-color: #4B0082;	
+}
+
+.btn-saddlebrown:hover {
+  background:#8B4513;
+  color: #fff;
+  border-color: #8B4513;	
+}
+
+
+.btn-chocolate:hover {
+  background: #D2691E;
+  color: #fff;
+  border-color: #D2691E;	
+}
+
+.btn-gold:hover {
+  background:	#FFD700;
+  color: #fff;
+  border-color: 	#FFD700;	
+}
+
+.btn-darkolivegreen:hover {
+  background: #556B2F;
+  color: #fff;
+  border-color:#556B2F;	
+}
+
+.btn-royalblue:hover {
+  background: #4169E1;
+  color: #fff;
+  border-color: #4169E1;	
+}
+
+.pic{
+	width:300px;
+	height:250px;
+}
+.font{
+	border-radius:10px;
+	font-size:30px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:10px ;
+}
+.font1{
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:10px ;
+}
+.font2{
+	border-radius:10px;
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:5px ;
+}
+.font3{
+	font-size: 25px;
+	font-family: cwTeXYen,sans-serif;
+	color:white;
+}
+.font4{
+	font-size: 30px;
+	font-family: cwTeXYen,sans-serif;
+	color:white;
+}
+.font6{
+	width:5em;
+	border-radius:10px;
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:5px ;
+	position:absolute;
+	right:20px;		/*div id go中的下拉式選單*/
+}
+.font7{
+	border-radius:10px;
+	font-size:25px;
+	font-family: cwTeXYen,sans-serif ;
+	letter-spacing:5px ;
+	color:white ;
+	margin-left:20px; 	/*div id go中的文字*/
+}
+#fourth h1{
+	text-align:center;
+	letter-spacing:10px ;
+	color:white;
+	line-height: 2em;
+	font-family: cwTeXYen,sans-serif;
+}
+#fourth p{
+	font-size: 25px;
+	text-align:center;
+	letter-spacing:10px ;
+	color:white;
+	line-height: 2.5em;
+}
+
+.font11{
+	font-size:25px;
+	font-family:cwTeXYen,sans-serif;
+	margin:1em 0 1em 0;
+	color:block;
+	width:1050px;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  
+}
+
+.grid-container > div {
+  
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+
+.content{
+	margin:0 15em ;
+	width:70%;
+}
+#index-second p{
+	letter-spacing:10px ;
+	font-size:30px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+#index-second h1{
+	font-family: cwTeXYen,sans-serif;
+	letter-spacing:10px ;
+	font-size:67px;
+	font-weight:bolder;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	
+	}
+#index-third{
+	margin-top: 3em;
+}
+#index-third h2{
+	text-align: center; 
+}
+
+#index-third .container{
+	padding: 30px;
+}
+#business p{
+	margin: 80px auto;
+	line-height: 50px;
+}
+
+#history p{
+	margin:50px auto; 
+}
+#index-fourth {
+	margin-top: 4em;
+	margin-bottom: 3em;
+}
+#index-fourth p{
+	margin-top: 2em;
+	font-size: 20px;
+	letter-spacing: 5px;
+}
+#index-fourth h2{
+	margin-bottom: 2em;
+	text-align: center;
+	background-color: rgb(227, 229, 227);
+	border-radius: 80px;
+	padding: 10px;
+}
+#index-fourth iframe{
+	width: 100%;
+	height: 500px;
+}
+
+#intro {
+background-color:rgb(238, 236, 231);
+}
+
+#intro img{
+width: 200px;	
+}
+#intro li{
+	margin: 0 10px;
+}
+#collapsibleNavbar a{
+	font-size: 25px;
+	font-family:cwTeXYen,sans-serif;
+	color:black;
+}
+
+#second h1{
+font-family: cwTeXYen,sans-serif;
+letter-spacing:10px ;
+font-size:67px;
+font-weight:bolder;
+color: white;
+text-align: center;
+
+}
+#second p{
+	letter-spacing:10px ;
+	font-size:30px;
+	color: white;
+	text-align: center;
+}
+#third{
+	padding:40px 20px;
+}
+#third .btn{
+	border-radius: 300px;
+	color: white;
+	font-size: 25px;
+}
+#third .btn-group{
+	width: 100%;
+	margin:10px 20px;
+}
+#third a{
+	font-size: 20px;
+}
+
+#fourth .container{
+	padding-top:5em;
+	padding-bottom:5em; 
+}
+#fourth img{
+	width:450px ;
+	height:300px;
+}
+footer{
+	border-top: 1px solid #000000;
+	padding: 20px 0px;
+	background-color: rgb(238, 236, 231);
+}
+footer h3{
+	font-family: cwTeXYen,sans-serif;
+	font-weight:bolder;
+
+}
+footer p{
+	font-size: 20px;
+
+}
+footer a{
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+footer img{
+	padding-top:18px ;
+	width: 300px;
+}
+footer a{
+	color: black;
+}
+#latest{
+	margin-bottom: 0;
+}
+#booking-second h2{
+	line-height: 1em;
+	letter-spacing: 5px;
+	font-family: cwTeXYen,sans-serif;
+	padding:1em 0 ;
+
+} 
+#booking-second input select{
+	margin-bottom: 10px;
+}
+#booking-second p{
+	font-size: 20px;
+}
+#ti {
+	width: 50%;
+}
+#datepicker {
+	width: 50%;
+
+}
+#booking b,a,span{
+	font-size: 15px;
+}
+#booking-second label{
+	font-size: 20px;
+}
+
+#booking-second .container{
+	background-color: rgb(255, 255, 255);
+	border-radius: 2em 2em;
+}
+#booking-second{
+	padding: 2em 2em;
+	
+}
+#booking-second button{
+	background-color:rgb(119, 172, 107);
+	font-size: 20px;
+	margin:1em auto;
+	width: 100%;
+	height: 40px;
+}
+#modal-body button{
+	border-radius: 5px;
+    width: 100%;
+	height: 10%;
+	font-size: 25px;
+	font-family: cwTeXYen,sans-serif;
+	margin:0.5em;
+}
+
+#menu-img{
+	width: 150px;
+	margin: 1em;
+
+}
+#bk-second-menu{
+	padding-bottom: 1em;
+}
+#bk-second .justify-content-center .btn{
+	background-color: rgb(105, 163, 114);
+	width: 80%;
+	border: solid 1px;
+	border-radius: 2em 2em 2em 2em;
+	font-size: 20px;
+}
+
+#bk-second h3{
+	font-family: cwTeXYen,sans-serif;
+	text-align: center;
+}
+
+#bk-second .modal-header h2{
+	font-family: cwTeXYen,sans-serif;
+}
+#bk-second .modal-header input{
+	outline:none;border:none;
+}
+#bk-second .col-lg img{
+	padding: 2em;
+}
+
+#side1 h2{
+	font-family: cwTeXYen,sans-serif;
+	text-align: left;
+	padding-top: 1em;
+}
+
+#side1{
+	border-left:solid 1px  rgb(197, 191, 191);
+	border-top:solid 1px  rgb(197, 191, 191);
+	height: 89em;
+	overflow: scroll;
+}
+
+#Sidebar  td,input{
+	font-size:20px;
+	font-family:cwTeXYen,sans-serif;
+}	
+
+#a td{
+	font-size: 20px;
+	font-family:  cwTeXYen,sans-serif;
+	width:150px;
+}
+#click {
+	margin:1em auto;
+}
+#ck-second h2{
+	line-height: 80px;
+	font-family:  cwTeXYen,sans-serif;
+}
+
+#bkok-second h1{
+	padding:5.6em 0;
+	font-family:  cwTeXYen,sans-serif;
+}
+
+
+
+
