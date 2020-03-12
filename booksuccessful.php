@@ -45,7 +45,7 @@
 <section id="bkok-second">
 			<div class="container">
       <h1 class="text-center ">感謝您的訂購，五秒後將自動回到首頁</h1>
-      
+      <script>setTimeout("location.href='index.html'",5000)</script>
 			<?php
 $takeway=$_POST["takeway"];
 $time=$_POST["time"];
@@ -77,7 +77,6 @@ $db_name="mydb";
 $db_link = new mysqli($servername, $username, $password,$db_name);
 
 if ($db_link->connect_error!="") {
-    echo" 連接失敗 " ;
 }
 else{
 	$db_link->query("set names'utf8'");
