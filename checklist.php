@@ -131,11 +131,11 @@ echo "</div>"
 <div  style="<?php if ($takeway == "外帶") {echo "display:none";}?>">
 外送餐點地址:<input type="text" name="address" value="<?php echo $address?>"></div>
 	</div>
-      <div id="click" class="row text-center">
-        <div class="col-md ">
+      <div id="click" class="row justify-content-around  text-center">
+        <div class="col-md-6 ">
         <input type="button" class="btn btn-primary" onclick="window.history.back()" value="重新訂購">   
         </div>
-        <div class="col-md ">
+        <div class="col-md-6 ">
         <input  type="submit" class="btn btn-primary"  onclick=javascript:location.href="booksuccessful.php" value="確認訂購">
         </div>
       </div>
