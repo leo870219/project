@@ -38,7 +38,7 @@ button.btn {
 	cursor: pointer;
 }
 
-a.btn,.btn {
+a.btn{
    margin-right: 1em;
 	display: inline-block;
 	text-align: center;
@@ -427,6 +427,7 @@ footer a{
 	border: solid 1px;
 	border-radius: 2em 2em 2em 2em;
 	font-size: 20px;
+	height: 45px;
 }
 
 #bk-second h3{
@@ -443,7 +444,10 @@ footer a{
 #bk-second .col-lg img{
 	padding: 2em;
 }
-
+#shopcar
+{
+	width: 100%;
+}
 #side1 h2{
 	font-family: cwTeXYen,sans-serif;
 	text-align: left;
@@ -494,3 +498,22 @@ footer a{
 #latest .col-md-4{
 	padding: 1em 2em;
 }
+
+#la.btn{
+	width: 100%;
+	font-size: 20px;
+	font-family:  cwTeXYen,sans-serif;
+}
+
+.btn.bg-primary.text-white{
+	width: 100%;
+	font-size: 20px;
+	font-family:  cwTeXYen,sans-serif;
+}
+
+.btn.btn-primary{
+	margin: 0.5em 1em;
+	width: 15em;
+	font-size: 20px;
+	font-family:  cwTeXYen,sans-serif;
+} 
