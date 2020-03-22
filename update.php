@@ -1,7 +1,7 @@
 <?php
 include("connMysqlObj.php");
 if (isset($_POST["action"]) && ($_POST["action"] == "update")) {
-  $sql_query = "UPDATE list SET Name=?,Phone=?,Takeway=?,Date=?,Time=?,Address=?,Mail=?,Meals=?,Size=?,Marinade=?,Ad=?,Spicy=?,Cut=?,Amount=?,Total=? WHERE cNumber=?";
+  $sql_query = "UPDATE order SET Name=?,Phone=?,Takeway=?,Date=?,Time=?,Address=?,Mail=?,Meals=?,Size=?,Marinade=?,Ad=?,Spicy=?,Cut=?,Amount=?,Total=? WHERE cNumber=?";
   $stmt = $db_link->prepare($sql_query);
   $stmt->bind_param("sssssssssssssssi", $_POST["Name"], $_POST["Phone"], $_POST["Takeway"], $_POST["Date"], $_POST["Time"], $_POST["Address"], $_POST["Mail"], $_POST["Meals"], $_POST["Size"], $_POST["Marinade"], $_POST["Ad"], $_POST["Spicy"], $_POST["Cut"], $_POST["Amount"], $_POST["Total"], $_POST["cNumber"]);
   $stmt->execute();
@@ -10,7 +10,7 @@ if (isset($_POST["action"]) && ($_POST["action"] == "update")) {
   //重新導向回到主畫面
   header("Location: data.php");
 }
-$sql_select = "SELECT cNumber, Name, Phone, Takeway, Date, Time, Address, Mail, Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total FROM list WHERE cNumber = ?";
+$sql_select = "SELECT cNumber, Name, Phone, Takeway, Date, Time, Address, Mail, Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total FROM order WHERE cNumber = ?";
 $stmt = $db_link->prepare($sql_select);
 $stmt->bind_param("i", $_GET["id"]);
 $stmt->execute();
