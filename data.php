@@ -1,9 +1,9 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 include("connMysqlObj.php");
-$seldb = @mysqli_select_db($db_link, "mydb");
+$seldb = @mysqli_select_db($db_link, "heroku_d483171ce082cb3");
 if (!$seldb) die("資料庫選擇失敗！");
-$sql_query = "SELECT * FROM order";
+$sql_query = "SELECT * FROM odlist";
 $result = mysqli_query($db_link, $sql_query);
 $total_records = mysqli_num_rows($result);
 ?>

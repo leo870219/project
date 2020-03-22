@@ -47,9 +47,7 @@
 	<section id="bkok-second">
 		<div class="container">
 			<h1 class="text-center ">感謝您的訂購，五秒後將自動回到首頁</h1>
-			<script>
-				setTimeout("location.href='index.html'", 5000)
-			</script>
+
 			<?php
 			$takeway = $_POST["takeway"];
 			$time = $_POST["time"];
@@ -73,10 +71,10 @@
 			$e = implode(',', $e);
 			$f = implode(',', $f);
 			$g = implode(',', $g);
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$db_name = "mydb";
+			$servername = "us-cdbr-iron-east-04.cleardb.net";
+			$username = "b586927e7e8dad";
+			$password = "624a5963";
+			$db_name = "heroku_d483171ce082cb3";
 
 			$db_link = new mysqli($servername, $username, $password, $db_name);
 
@@ -84,7 +82,7 @@
 			} else {
 				$db_link->query("set names'utf8'");
 
-				$sql = "INSERT INTO order (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g','$total')";
+				$sql = "INSERT INTO odlist (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g','$total')";
 
 				if ($db_link->query($sql) === TRUE) {
 				} else {
