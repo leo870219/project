@@ -67,7 +67,7 @@
 				</div></br>
 				<label>取餐時間:</label>
 				<div class="form-inline">
-					<input type="text" class="form-control" name="time" required id="datepicker" onchange="a()">
+					<input type="text" class="form-control" name="time" required id="datepicker" onchange="OrderTime()">
 					<select id="ti" name="ti" required class="form-control"></select>
 				</div>
 				<label for="usr">姓名:</label>
@@ -81,17 +81,17 @@
 				<div id="demo" style="display: none;">
 					<label>外送地址:</label>
 
-					<select class="form-control" name="column1" id="column1" size=1 placeholder="請輸入電子郵件"
-						onclick="onChangeColumn1()">
+					<select class="form-control" name="city" id="city" size=1 placeholder="請選擇外送地址"
+						onclick="chooseCity()">
 						<option value="" style="display: none">請先選擇縣市</option>
 						<script>
 							for (i = 1; i < dataTree.length; i++)
 								document.writeln("<option value=\"" + dataTree[i].name + "\">" + dataTree[i].name);
 						</script>
 					</select>
-					<select class="form-control" name="column2" id="column2" size=1 onclick="onChangeColumn2()">
+					<select class="form-control" name="area" id="area" size=1 onclick="chooseArea()">
 					</select>
-					<select class="form-control" name="column3" id="column3" size=1 onclick="onChangeColumn3()">
+					<select class="form-control" name="road" id="road" size=1 onclick="chooseRoad()">
 					</select>
 					<input class="form-control" type="text" id="address" name="address" placeholder="外送地址">
 					<input type="hidden" name="path">

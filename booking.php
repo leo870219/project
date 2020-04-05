@@ -216,7 +216,7 @@ $address=$_POST["address"];
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <p class="modal-title">您選擇的餐點:<input type="text" size="6"  readonly="readonly" id="add" name="add"></p>
+          <p class="modal-title">您選擇的餐點:<input type="text" size="6"  readonly="readonly" id="selectedMeal" name="selectedMeal"></p>
           <button type="button" class="close" data-dismiss="modal" onclick="hidePopup()">&times;</button>
         </div>
         
@@ -227,7 +227,7 @@ $address=$_POST["address"];
             <label>飯量</label>
             </div>
             <div class="col-lg-6">
-            <select id="add1"  class="form-control" name="add1" size="1" class="font6"><option value="正常">正常<option value="飯多">飯多<option value="飯少">飯少</select>
+            <select id="meals"  class="form-control" name="meals" size="1" class="font6"><option value="正常">正常<option value="飯多">飯多<option value="飯少">飯少</select>
             </div>
           </div>
           <div class="row">
@@ -235,7 +235,7 @@ $address=$_POST["address"];
             <label>滷汁</label>
             </div>
             <div class="col-lg-6">
-            <select id="add2"  class="form-control" name="add2" size="1" class="font6"><option value="正常">正常<option value="不汁">不汁<option value="汁少">汁少<option value="汁多">汁多<option value="只汁">只汁<option value="只滷肉">只滷肉</select>
+            <select id="marinade"  class="form-control" name="marinade" size="1" class="font6"><option value="正常">正常<option value="不汁">不汁<option value="汁少">汁少<option value="汁多">汁多<option value="只汁">只汁<option value="只滷肉">只滷肉</select>
             </div>
           </div>  
           <div class="row">
@@ -243,7 +243,7 @@ $address=$_POST["address"];
             <label>加料</label>
             </div>
             <div class="col-lg-6">
-            <select id="add3"  class="form-control" name="add3" size="1" class="font6"><option value="不加">不加 <option value="加蛋">加蛋</select>
+            <select id="feed "  class="form-control" name="feed " size="1" class="font6"><option value="不加">不加 <option value="加蛋">加蛋</select>
             </div>
           </div>  
           <div class="row">
@@ -251,7 +251,7 @@ $address=$_POST["address"];
             <label>加辣</label>
             </div>
             <div class="col-lg-6">
-            <select id="add4"  class="form-control" name="add3" size="1" class="font6"><option value="不加">不加 <option value="加">加</select>
+            <select id="spicy"  class="form-control" name="spicy" size="1" class="font6"><option value="不加">不加 <option value="加">加</select>
             </div>
           </div>  
           <div class="row">
@@ -259,7 +259,7 @@ $address=$_POST["address"];
             <label>是否要切</label>
             </div>
             <div class="col-lg-6">
-            <select id="add5"  class="form-control" name="add5" size="1" class="font6"><option value="切">切<option value="不切">不切</select>
+            <select id="cut"  class="form-control" name="cut" size="1" class="font6"><option value="切">切<option value="不切">不切</select>
             </div>
           </div>
           <div class="row">
@@ -267,7 +267,7 @@ $address=$_POST["address"];
             <label>數量</label>
             </div>
             <div class="col-lg-6">
-            <select id="add6"  class="form-control" name="amount" size="1"class="font6" onchange="money()"><option value="1">1<option value="2">2<option value="3">3<option value="4">4
+            <select id="amount"  class="form-control" name="amount" size="1"class="font6" onchange="subTotal()"><option value="1">1<option value="2">2<option value="3">3<option value="4">4
             <option value="5">5<option value="6">6<option value="7">7<option value="8">8<option value="9">9<option value="10">10</select>
             </div>
             </div>
@@ -276,9 +276,9 @@ $address=$_POST["address"];
             <label>小計</label>
             </div>
             <div class="col-lg-6">
-            <input type="text" class="form-control " size="6"  readonly="readonly" id="money" name="money" style="background-color:white">
+            <input type="text" class="form-control " size="6"  readonly="readonly" id="subTotal" name="subTotal" style="background-color:white">
             <input type="text" id="price" class="d-none">
-            <input type="text" id="pic" class="d-none">
+            <input type="text" id="picture" class="d-none">
             </div>
             <div class="col-lg-12">
             <button type="button" class="btn bg-primary text-white" data-dismiss="modal" onclick="ShoppingCart('Sidebar');">加入購物車</button>
@@ -294,7 +294,7 @@ $address=$_POST["address"];
             <h2>購物車:</h2>
         <div class="table-responsive" id="Sidebar"></div>
         <div class="col-lg" id="Sidebar1" >
-        <button class="btn bg-primary text-white" type="submit" style="display:none;" id="la"  >訂購<span id="bill" class="badge"></span></button>
+        <button class="btn bg-primary text-white" type="submit" style="display:none;" id="orderButton"  >訂購<span id="bill" class="badge"></span></button>
         <input id="total" name="total" type="text" class="d-none">
         </div>
 

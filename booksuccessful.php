@@ -58,21 +58,21 @@
 			$phone = $_POST["phone"];
 			$mail = $_POST["mail"];
 			$address = $_POST["address"];
-			$a = $_POST["a"];
-			$b = $_POST["b"];
-			$c = $_POST["c"];
-			$d = $_POST["d"];
-			$e = $_POST["e"];
-			$f = $_POST["f"];
-			$g = $_POST["g"];
+			$selectedMeal = $_POST['selectedMeal'];
+			$meals = $_POST['meals'];
+			$marinade = $_POST['marinade'];
+			$feed = $_POST['feed'];
+			$spicy = $_POST['spicy'];
+			$cut = $_POST['cut'];
+			$amount = $_POST['amount'];
 			$total = $_POST['total'];
-			$a = implode(',', $a);
-			$b = implode(',', $b);
-			$c = implode(',', $c);
-			$d = implode(',', $d);
-			$e = implode(',', $e);
-			$f = implode(',', $f);
-			$g = implode(',', $g);
+			$selectedMeal = implode(',', $selectedMeal);
+			$meals = implode(',', $meals);
+			$marinade = implode(',', $marinade);
+			$feed = implode(',', $feed);
+			$spicy = implode(',', $spicy);
+			$cut = implode(',', $cut);
+			$amount = implode(',', $amount);
 			$servername = "us-cdbr-iron-east-04.cleardb.net";
 			$username = "b586927e7e8dad";
 			$password = "624a5963";
@@ -84,7 +84,7 @@
 			} else {
 				$db_link->query("set names'utf8'");
 
-				$sql = "INSERT INTO odlist (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$a','$b','$c','$d','$e','$f','$g','$total')";
+				$sql = "INSERT INTO odlist (Name,Phone,Takeway,Date,Time,Address,Mail,Meals,Size,Marinade,Ad,Spicy,Cut,Amount,Total)VALUES('$_POST[name]','$_POST[phone]','$_POST[takeway]','$_POST[time]','$_POST[ti]','$_POST[address]','$_POST[mail]','$selectedMeal','$meals','$marinade','$feed','$spicy','$cut','$amount','$total')";
 
 				if ($db_link->query($sql) === TRUE) {
 				} else {

@@ -83,14 +83,14 @@ $address=$_POST["address"];
         </div>
       </div>
 <?php
-$a=$_POST['a'];
-$b=$_POST['b'];
-$c=$_POST['c'];
-$d=$_POST['d'];
-$e=$_POST['e'];
-$f=$_POST['f'];
-$g=$_POST['g'];
-$g=$_POST['h'];
+$selectedMeal=$_POST['selectedMeal'];
+$meals=$_POST['meals'];
+$marinade=$_POST['marinade'];
+$feed=$_POST['feed'];
+$spicy=$_POST['spicy'];
+$cut=$_POST['cut'];
+$amount=$_POST['amount'];
+$sum=$_POST['sum'];
 $total=$_POST['total'];
 echo "<div class=\"table-responsive\">";
 echo "<table class=\"table\" id='a'>";
@@ -104,16 +104,16 @@ echo"<td>是否切</td>";
 echo"<td>數量</td>";
 echo"<td>金額</td>";
 echo"</tr>	";  
-for($i=0;$i<count($_POST['a']);$i++){ 
+for($i=0;$i<count($_POST['selectedMeal']);$i++){ 
 echo"<tr>";
-echo"<td><input type=\"text\" size=\"6\" style=\"outline:none;border:none\"readonly=\"readonly\" name=\"a[]\"value=".($_POST['a'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"3\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"b[]\"value=".($_POST['b'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"5\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"c[]\"value=".($_POST['c'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"3\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"d[]\"value=".($_POST['d'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"3\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"e[]\"value=".($_POST['e'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"4\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"f[]\"value=".($_POST['f'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"4\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"g[]\"value=".($_POST['g'][$i])."></td>";
-echo"<td><input type=\"text\" size=\"6\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"h[]\"value=".($_POST['h'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"6\" style=\"outline:none;border:none\"readonly=\"readonly\" name=\"selectedMeal[]\"value=".($_POST['selectedMeal'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"3\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"meals[]\"value=".($_POST['meals'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"5\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"marinade[]\"value=".($_POST['marinade'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"3\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"feed[]\"value=".($_POST['feed'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"3\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"spicy[]\"value=".($_POST['spicy'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"4\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"cut[]\"value=".($_POST['cut'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"4\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"amount[]\"value=".($_POST['amount'][$i])."></td>";
+echo"<td><input type=\"text\" size=\"6\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"sum[]\"value=".($_POST['sum'][$i])."></td>";
 echo"</tr>";
 }
 echo"<tr><td colspan=\"6\"></td><td>總金額</td><td><input type=\"text\" size=\"6\" style=\"outline:none;border:none\" readonly=\"readonly\" name=\"total\"value=".$total."></td></tr>";
