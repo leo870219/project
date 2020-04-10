@@ -25,31 +25,35 @@ $address=$_POST["address"];
 </head>
 
 <body>
-  <section id="intro">
-		<div class="container">
-		  <div class="navbar navbar-expand-md">
-			<a class="navbar-brand" href="#">
-			  <img src="images/logo.png" alt="logo" style="width:130px;">
-			</a> 
-		  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-		  <span class="fas fa-bars"></span>
-		  </button>
-				<div class="collapse navbar-collapse " id="collapsibleNavbar">
-			<ul class="navbar-nav ">
-				<a class="navbar-brand" href="index.html"></a>
-			<ul class="navbar-nav ">
-			  <li class="nav-item">
-				<a class="nav-link" href="index.html">關於龍品</a></li>
-			  <li class="nav-item">
-				<a class="nav-link" href="product.html">產品介紹</a></li>
-			  <li class="nav-item">
-				<a class="nav-link" href="booking.html" >線上訂餐</a>
-			  <li>
-			</ul>
-		  </div>  
+<section id="intro">
+		<nav class="navbar navbar-expand-md navbar-light">
+		  <div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+			  <img src="images/logo.png" width="100" height="80" class="d-inline-block align-top" alt="龍品快餐店">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+				  <a class="nav-link" href="index.html">關於龍品</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="product.html">產品介紹</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="booking.html">線上訂餐</a>
+				</li>
+			  </ul>
+			  <span class="navbar-text">
+					<a class="text-muted nav-link" href="https://www.facebook.com/%E9%BE%8D%E5%93%81%E5%BF%AB%E9%A4%90%E5%BA%97-300982883289665/?ref=br_rs"><i class="fab fa-facebook-square"></i></i>Facebook</a>				
+			  </span>
+			</div>
 		  </div>
-		</div>
-	</section>
+		</nav>
+	  </section>
   
   <section id="ck-second">
     <div class=" container">
@@ -78,7 +82,7 @@ $address=$_POST["address"];
         </div>
         </div>
         <div class="row ">
-        <div class="col-md-12" style="<?php if ($takeway == "外帶") {echo "display:none";}?>;">
+        <div class="col-md-12" <?php if ($takeway == "外帶") {echo "style=\"display:none\"";}?>;">
         <p>外送餐點地址</br><?php echo $address?></p>
         </div>
       </div>
@@ -128,7 +132,7 @@ echo "</div>"
 訂購人電話:<input type="text" name="phone" value="<?php echo $phone?>"></br>
 <input type="text" name="path" value="<?php echo $path?>"></br>
 訂購人電子郵件:<input type="text" name="mail" value="<?php echo $mail?>"></br>
-<div  style="<?php if ($takeway == "外帶") {echo "display:none";}?>">
+<div  <?php if ($takeway == "外帶") {echo "style=\"display:none\"";}?>">
 外送餐點地址:<input type="text" name="address" value="<?php echo $address?>"></div>
 	</div>
       <div id="click" class="row justify-content-around  text-center">
