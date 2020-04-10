@@ -22,7 +22,6 @@ $address=$_POST["address"];
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/css.css" media="screen" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -321,26 +320,25 @@ $address=$_POST["address"];
     </div>
   </section>
 
-<section id="latest">
-	<footer>
+  <section id="index-latest">
 		<div class="container">
-		<div class="row">
-			<div class="col-lg-4">
-				<img class="img-fluid" src="images/logo1.png">
+		  <div class="row">
+			<div class="col">
+			  <img class="img-fluid" src="images/logo1.png">
 			</div>
-			<div class="col-lg-4">
-				<h3>連結</h3>
-				<a href="index.html">關於龍品</a>
-				<a href="product.html">產品介紹</a>
-				<a href="booking.html">線上訂餐</a>
+			<div class="col">
+			  <h5>連結</h5>
+			  <a href="index.html">關於龍品</a></br>
+			  <a href="product.html">產品介紹</a></br>
+			  <a href="booking.html">線上訂餐</a>
 			</div>
-			<div class="col-lg-4">
-				<h3>聯絡我們</h3>
-				<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+			<div class="col">
+			  <h5>聯絡我們</h5>
+			  <p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
 			</div>
+		  </div>
 		</div>
-</footer>
-</section>
+	  </section>
 
 </body>
 </html>

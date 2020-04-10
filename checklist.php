@@ -14,11 +14,9 @@ $address=$_POST["address"];
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/css.css" media="screen" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="scripts/1.js"></script>
 <title>線上訂餐</title>
@@ -58,29 +56,31 @@ $address=$_POST["address"];
   <section id="ck-second">
     <div class=" container">
     <form action="booksuccessful.php" method="post">
-    <h2 class="col-md-10 text-center">訂購資料及商品確認</h2>
+    <h4 class="col-md-10 text-center">訂購資料及商品確認</h4>
       <div class="row ">
-        <div class="col-md">
+        <div class="col">
         <p>取餐方式</br><?php echo $takeway?></p>
         </div>
-        <div class="col-md">
+        <div class="col">
         <p>取餐日期</br><?php echo $time?></p>
         </div>
-        <div class="col-md">
+        <div class="col">
         <p>取餐時間</br><?php echo $ti?></p>
         </div>
         </div>
         <div class="row">
-        <div class="col-md">
+        <div class="col-4">
         <p>訂購人姓名</br><?php echo $name?></p>
         </div>
-        <div class="col-md">
+        <div class="col-8">
         <p>訂購人電子郵件</br><?php echo $mail?></p>
-        </div>
-        <div class="col-md">
+		</div>
+		</div>
+		<div class="row ">
+        <div class="col">
         <p>訂購人電話</br><?php echo $phone?></p>
         </div>
-        </div>
+		</div>
         <div class="row ">
         <div class="col-md-12" <?php if ($takeway == "外帶") {echo "style=\"display:none\"";}?>;">
         <p>外送餐點地址</br><?php echo $address?></p>
@@ -136,10 +136,10 @@ echo "</div>"
 外送餐點地址:<input type="text" name="address" value="<?php echo $address?>"></div>
 	</div>
       <div id="click" class="row justify-content-around  text-center">
-        <div class="col-md-6 ">
+        <div class="col ">
         <input type="button" class="btn btn-primary" onclick="window.history.back()" value="重新訂購">   
         </div>
-        <div class="col-md-6 ">
+        <div class="col ">
         <input  type="submit" class="btn btn-primary"  onclick=javascript:location.href="booksuccessful.php" value="確認訂購">
         </div>
       </div>
@@ -148,25 +148,25 @@ echo "</div>"
   </div>
 </sectiton>
 
-<section id="latest">
-	<footer>
+<section id="index-latest">
 		<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<img class="img-fluid" src="images/logo1.png">
-			</div>
-			<div class="col-md-4">
-				<h3>連結</h3>
-				<a href="index.html">關於龍品</a>
-				<a href="product.html">產品介紹</a>
-				<a href="booking.html">線上訂餐</a>
-			</div>
-			<div class="col-md-4">
-				<h3>聯絡我們</h3>
-				<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+			<div class="row">
+				<div class="col">
+					<img class="img-fluid" src="images/logo1.png">
+				</div>
+				<div class="col">
+					<h5>連結</h5>
+					<a href="index.html">關於龍品</a></br>
+					<a href="product.html">產品介紹</a></br>
+					<a href="booking.html">線上訂餐</a>
+				</div>
+				<div class="col">
+					<h5>聯絡我們</h5>
+					<p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+				</div>
 			</div>
 		</div>
-</footer>
-</section>
+	</section>
+
 </body>
 </html>

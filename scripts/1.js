@@ -269,7 +269,7 @@ ShoppingCart = (obj) => {
       <td><input type="text" size="6" name="selectedMeal[]" value=${document.getElementById("selectedMeal").value} style="outline:none;;border:none;font-size:23.6px" readonly="readonly"></td>
       <td class="text-right"><a onclick="del(this)" value="x" style="width:20px"><i class="fas fa-times-circle"></i></a></td>
       </tr><tr>
-      <td colspan="2"><img src="images/${picture.value}.png" class="img-fluid" style="width:350px; height:185px;"readonly="readonly"></td>
+      <td colspan="2"><img src="images/${picture.value}.png" class="img-fluid" readonly="readonly"></td>
       </tr><tr>
       <td>飯量</td>
       <td><input type="text" size="3" name="meals[]" value=${document.getElementById("meals").value} style="outline:none;border:none;float:right;text-align:right"readonly="readonly"></td>
