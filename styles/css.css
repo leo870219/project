@@ -1,37 +1,62 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+h1,h2,h3,h4,h5,h6,p{
+  margin: 1.5vmin 0;
+}
+p,b,a,label,span,ul,li {
+  font-family: cwTeXYen, sans-serif;
+  font-size: 3vmin;
+  text-align: center;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: cwTeXYen, sans-serif;
+  text-align: center;
+}
+select{
+  font-family: cwTeXYen, sans-serif;
+  font-size: 3vmin;
+}
 #intro {
   background-color: #eeece7;
 }
-#index-latest {
-  background-color: #eeece7;
-  margin-bottom: 0;
+#intro a {
+  text-align: left;
 }
-footer {
-  border-top: 1px solid #000000;
-  padding: 20px 0px;
-  background-color: rgb(238, 236, 231);
+#intro img{
+  width: 12vmin;
+  height: 10vmin;
 }
-p,
-b,
-a,
-label,
-span,
-ul,
-li {
-  font-family: cwTeXYen, sans-serif;
-  font-size: 1.2rem;
-  text-align: center;
+#index-second .title,
+#second .title {
+  font-size: 8vmin;
+  letter-spacing: 1.5vmin;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: cwTeXYen, sans-serif;
-  text-align: center;
+#index-second p,
+#second p {
+  letter-spacing: 1vmin;
+  color: rgb(255, 255, 255);
 }
-
+#index-third .title,
+#third .title {
+  font-size: 5vmin;
+}
+#index-fourth .title{
+  font-size: 5vmin;
+  margin-bottom: 5vmin;
+  background-color: rgb(224, 221, 221);
+  border-radius: 5vmin 5vmin;
+  padding: 1vmin 4vmin;
+}
+#index-fourth p {
+  margin: 3vmin auto;
+}
+#index-third {
+  padding: 1.5vmin;
+}
+#index-third .container .row {
+  padding: 1.5vmin 0;
+}
 .iframe-rwd {
   position: relative;
   padding: 10px 15px;
@@ -43,131 +68,168 @@ h6 {
   width: 100%;
   height: 100%;
 }
-
-/* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
-  #intro a {
-    text-align: left;
-  }
-  #intro img{
-	  width: 60px;
-	  height: 50px;
-  }
-  #index-second h1,
-  #second h1 {
-    letter-spacing: 10px;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
-    text-align: center;
-  }
-  #index-second p,
-  #second p {
-    letter-spacing: 10px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-  }
-
-  #index-third {
-    padding: 10px;
-  }
-
-  #index-third .container .row {
-    padding: 10px 0;
-  }
-
-  #index-third p {
-    font-size: 1rem;
-  }
-
-  #index-fourth p {
-    font-size: 1rem;
-    margin: 10px auto;
-  }
-
-  #index-latest h5 {
-    text-align: left;
-    font-family: cwTeXYen, sans-serif;
-  }
-
-  #index-latest p {
-    font-size: 0.8rem;
-    text-align: left;
-  }
-  #index-latest a {
-	font-size: 0.8rem;
+#index-latest a {
 	color: grey;
   }
   #index-latest a:hover {
 	color: black;
   }
+#index-latest h5,#index-latest p {
+  text-align: left;
 }
-
+footer {
+  border-top: 1px solid #000000;
+  padding: 2.8vmin;   
+  background-color: rgb(238, 236, 231);
+}
 #third {
-  padding: 20px;
+  padding: 3.5vmin;
 }
 #third .btn {
-  border-radius: 40px;
-  color: white;
-  font-size: 0.7rem;
-  margin: 3px;
-}
-#third .btn-group {
-  margin: 10px 20px;
-}
-
-#third a.btn {
   display: inline-block;
   text-align: center;
   border: 1px solid;
   transition: all 0.2s ease;
-  width: 50px;
-  height: 50px;
-}
-#fourth .img-fluid {
-  max-width: 90%;
-  height: auto;
-}
-.title {
-  font-size: 25px;
+  width: 16vmin;
+  height: 16vmin;
+  border-radius: 16vmin 16vmin;
   color: white;
-  letter-spacing: 20px;
+  font-size: 3vmin;
+  padding: 4vmin;
+}
+#fourth .title {
+  font-size: 6vmin;
+  color: white;
+  letter-spacing: 3vmin;
+}
+#fourthimg{
+  max-width: 80%;
+  height: auto;
 }
 #fourth p {
   color: white;
-  letter-spacing: 10px;
+  letter-spacing: 0.5vmin;
+  line-height: 7vmin;
 }
-
+#fourth  .container{
+  padding-bottom: 2rem;
+}
 #booking-second{
-	padding:70px 20px;
+	padding:6vmin;
 }
-
 #booking-second .container {
   background-color: rgb(255, 255, 255);
-  border-radius: 1rem 1rem;
-  padding: 10px;	
+  border-radius: 2vmin 2vmin;
+
 }
-#menu-img{
-	width: 75px;
-	height: 50px;
-	margin: 20px;
+.form{
+  padding-top: 3vmin;
 }
 
+#menu-img{
+	width: 40vmin;
+	height: 7.5vmin;
+	margin: 2.8vmin;
+}
 #bk-second-menu img{
 	max-width: 70%;
 	height: auto;
-	margin: 10px auto;
+	margin: 3vmin auto;
 }
-#booking-second .btn {
-	margin: 10px auto;
+#bk-second .title{
+  font-size: 4vmin;
+}
+  #selectedMeal{
+    border:none;
+  }
+  #side1 .title{
+    font-size: 4vmin;
+  }
+  #side1 {
+    border-left: solid 1px rgb(197, 191, 191);
+    border-top: solid 1px rgb(197, 191, 191);
+    height: 180vmin;
+    overflow: scroll;
+  }
+  #booking-second button {
+    background-color: rgb(119, 172, 107);
+    font-family:cwTeXYen, sans-serif;
+    font-size: 3vmin;
+    margin: 1.6vmin auto;
+    width: 100%;
+    height: 40px;
+  }
+
+  #bk-second .justify-content-center .btn {
+    background-color: rgb(105, 163, 114);
+    width: 80%;
+    border: solid 1px;
+    border-radius: 10vmin;
+    margin:0 2vmin 2vmin 2vmin;
+    font-size: 3vmin;
+  }
+  .modal-body label , .modal-body p{
+    font-size: 3vmin;
+  }
+  .modal-header p,.modal-header input{
+    font-size: 3vmin;
+  }
+  .modal-body button {
+    width: 100%;
+    font-family: cwTeXYen, sans-serif;
+    margin-top: 3vmin;
+  }
+  #side1 button{
+    width: 100%;
+    font-family: cwTeXYen, sans-serif;
+    margin-bottom: 3vmin;
+  }
+
+  #side1 input,td{
+    font-family: cwTeXYen, sans-serif;
+  }
+  #ck-second h4,#ck-second .row{
+    margin: 4vmin 0;
+  }
+  #ck-second p{
+    text-align: left;
+    font-size: 3vmin;
+  }
+  .table td{
+    font-size: 0.7rem;
+  }
+  .table{
+    margin: 0;
+  }
+  #ck-second .btn{
+    margin: 10px;
+    font-family: cwTeXYen, sans-serif;
+    font-size: 3vmin;
+  }
+  #bkok-second h3{
+      padding: 17rem 0;
+      font-family: cwTeXYen, sans-serif;
+    }
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+
+
+#fourth .img-fluid {
+  max-width: 80%;
+  height: auto;
+}
+#fourth .title {
+  font-size: 5vmin;
+  color: white;
+  letter-spacing: 6vmin;
+}
+#fourth p {
+  color: white;
+  letter-spacing: 1vmin;
+  font-size: 5vmin;
 }
 
-.row .text-center a.btn{
-margin: 10px;
-}
-#selectedMeal{
-	border:none;
-}
-
+/*
 #side1 img{
 	max-width: 70%;
 	height: auto;
@@ -189,192 +251,66 @@ margin: 10px;
 width: 100%;
 }
 
-#ck-second h4,#ck-second .row{
-	margin: 30px 0;
+
+  */
 }
-#ck-second p{
-	text-align: left;
-	font-size: 1rem;
-}
-.table td{
-	font-size: 0.7rem;
-	padding: 0.3rem;
-}
-.table{
-	margin: 0;
-}
-#ck-second .btn{
-	margin: 10px;
-	font-family: cwTeXYen, sans-serif;
-	font-size: 1rem;
-}
-#bkok-second h3{
-    padding: 17rem 0;
-    font-family: cwTeXYen, sans-serif;
-  }
+
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+
 }
+
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+  #third .btn {
+    margin: 1vw 0.5vw;
+  }
+  #business p {
+    margin: 6vmin auto;
+    line-height: 5vmin;
+  }
 }
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  #third .btn {
+    margin: 1vw 1vw;
+  }
+  #index-second img,#second img{
+    width: 100%;
+    height: 90vmin;
+  }
+  #business p {
+    margin: 10vmin auto;
+    line-height: 5vmin;
+  }
+  #history p {
+    margin: 7vmin auto;
+    line-height: 7vmin;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-  #latest .col-md-4 {
-    padding: 1em 2em;
+  #third .btn {
+    margin: 1vw 1vw;
   }
 
-  #orderButton.btn {
+  #index-second img,#second img{
     width: 100%;
-    font-size: 20px;
-    font-family: cwTeXYen, sans-serif;
-  }
-
-  .btn.bg-primary.text-white {
-    width: 100%;
-    font-size: 20px;
-    font-family: cwTeXYen, sans-serif;
-  }
-
-  .btn.btn-primary {
-    margin: 0.5em 1em;
-    width: 15em;
-    font-size: 20px;
-    font-family: cwTeXYen, sans-serif;
-  }
-  .pic {
-    width: 300px;
-    height: 250px;
-  }
-  .font {
-    border-radius: 10px;
-    font-size: 30px;
-    font-family: cwTeXYen, sans-serif;
-    letter-spacing: 10px;
-  }
-  .font1 {
-    font-size: 25px;
-    font-family: cwTeXYen, sans-serif;
-    letter-spacing: 10px;
-  }
-  .font2 {
-    border-radius: 10px;
-    font-size: 25px;
-    font-family: cwTeXYen, sans-serif;
-    letter-spacing: 5px;
-  }
-  .font3 {
-    font-size: 25px;
-    font-family: cwTeXYen, sans-serif;
-    color: white;
-  }
-  .font4 {
-    font-size: 30px;
-    font-family: cwTeXYen, sans-serif;
-    color: white;
-  }
-  .font6 {
-    width: 5em;
-    border-radius: 10px;
-    font-size: 25px;
-    font-family: cwTeXYen, sans-serif;
-    letter-spacing: 5px;
-    position: absolute;
-    right: 20px; /*div id go中的下拉式選單*/
-  }
-  .font7 {
-    border-radius: 10px;
-    font-size: 25px;
-    font-family: cwTeXYen, sans-serif;
-    letter-spacing: 5px;
-    color: white;
-    margin-left: 20px; /*div id go中的文字*/
-  }
-  #fourth h1 {
-    text-align: center;
-    letter-spacing: 10px;
-    color: white;
-    line-height: 2em;
-    font-family: cwTeXYen, sans-serif;
-  }
-  #fourth p {
-    font-size: 25px;
-    text-align: center;
-    letter-spacing: 10px;
-    color: white;
-    line-height: 2.5em;
-  }
-
-  .font11 {
-    font-size: 25px;
-    font-family: cwTeXYen, sans-serif;
-    margin: 1em 0 1em 0;
-    color: block;
-    width: 1050px;
-  }
-
-  .grid-container {
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto auto;
-  }
-
-  .grid-container > div {
-    text-align: center;
-    padding: 10px;
-    font-size: 30px;
-  }
-
-  .content {
-    margin: 0 15em;
-    width: 70%;
-  }
-  #index-second p {
-    letter-spacing: 10px;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-  }
-  #index-second h1 {
-    font-family: cwTeXYen, sans-serif;
-    letter-spacing: 10px;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
-    text-align: center;
-  }
-  #index-third {
-    margin-top: 3em;
-  }
-  #index-third h2 {
-    text-align: center;
-  }
-
-  #index-third .container {
-    padding: 30px;
+    height: 90vmin;
   }
   #business p {
-    margin: 80px auto;
-    line-height: 50px;
+    margin: 10vmin auto;
+    line-height: 7vmin;
   }
 
   #history p {
-    margin: 50px auto;
+    margin: 7vmin auto;
+    line-height: 7vmin;
   }
-  #index-fourth {
-    margin-top: 4em;
-    margin-bottom: 3em;
-  }
-  #index-fourth p {
-    margin-top: 2em;
-    font-size: 20px;
-    letter-spacing: 5px;
-  }
+
   #index-fourth h2 {
     margin-bottom: 2em;
     text-align: center;
@@ -411,60 +347,15 @@ width: 100%;
     color: white;
     text-align: center;
   }
-  #third {
-    padding: 40px 20px;
-  }
-  #third .btn {
-    border-radius: 100px;
-    color: white;
-    font-size: 20px;
-  }
-  #third .btn-group {
-    margin: 10px 20px;
-  }
+
 
   #fourth .container {
     padding-top: 5em;
     padding-bottom: 5em;
   }
-  #fourth img {
-    width: 300px;
-    height: 200px;
-  }
-  
-  footer h3 {
-    font-family: cwTeXYen, sans-serif;
-    font-weight: bolder;
-  }
-  footer p {
-    font-size: 20px;
-  }
-  footer a {
-    font-size: 20px;
-    margin-right: 10px;
-  }
 
-  footer img {
-    padding-top: 18px;
-    width: 300px;
-  }
-  footer a {
-    color: black;
-  }
   #latest {
     margin-bottom: 0;
-  }
-  #booking-second h2 {
-    line-height: 1em;
-    letter-spacing: 5px;
-    font-family: cwTeXYen, sans-serif;
-    padding: 1em 0;
-  }
-  #booking-second input select {
-    margin-bottom: 10px;
-  }
-  #booking-second p {
-    font-size: 20px;
   }
   #ti {
     width: 50%;
@@ -472,29 +363,9 @@ width: 100%;
   #datepicker {
     width: 50%;
   }
-  #booking b,
-  a,
-  span {
-    font-size: 15px;
-  }
-  #booking-second label {
-    font-size: 20px;
-  }
+  
 
-  #booking-second .container {
-    background-color: rgb(255, 255, 255);
-    border-radius: 2em 2em;
-  }
-  #booking-second {
-    padding: 2em 2em;
-  }
-  #booking-second button {
-    background-color: rgb(119, 172, 107);
-    font-size: 20px;
-    margin: 1em auto;
-    width: 100%;
-    height: 40px;
-  }
+
   #modal-body button {
     border-radius: 5px;
     width: 100%;
@@ -511,14 +382,7 @@ width: 100%;
   #bk-second-menu {
     padding-bottom: 1em;
   }
-  #bk-second .justify-content-center .btn {
-    background-color: rgb(105, 163, 114);
-    width: 80%;
-    border: solid 1px;
-    border-radius: 2em 2em 2em 2em;
-    font-size: 20px;
-    height: 45px;
-  }
+
 
   #bk-second h3 {
     font-family: cwTeXYen, sans-serif;
@@ -532,9 +396,7 @@ width: 100%;
     outline: none;
     border: none;
   }
-  #bk-second .col-lg img {
-    padding: 2em;
-  }
+
   #shopcar {
     width: 100%;
   }
@@ -575,29 +437,8 @@ width: 100%;
     font-family: cwTeXYen, sans-serif;
   }
 
-  .iframe-rwd {
-    position: relative;
-    padding: 30px 15px 30px 15px;
-    overflow: hidden;
-  }
-  .iframe-rwd iframe {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
 
-  a.btn {
-    margin-right: 1em;
-    display: inline-block;
-    text-align: center;
-    letter-spacing: 5px;
-    border: 1px solid;
-    transition: all 0.2s ease;
-    width: 80px;
-    height: 80px;
-    line-height: 30px;
-    font-family: cwTeXYen, sans-serif;
-  }
+
 }
 
 *,

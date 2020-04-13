@@ -75,7 +75,7 @@ $address=$_POST["address"];
           <div class="col-lg">  
             <img src="images\1.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>滷肉便當</h4></div>
+            <div class="col-lg"><p class="title">滷肉便當</p></div>
             <div class="d-none"><p>60</p><p>1</p></div>
             </div>
             <div class="row justify-content-center">
@@ -86,7 +86,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\2.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>特製便當</h4></div>
+            <div class="col-lg"><p class="title">特製便當</p></div>
             <div class="d-none"><p>80</p><p>2</p></div>
             </div>
             <div class="row justify-content-center">
@@ -97,7 +97,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\3.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>花枝捲飯</h4></div>
+            <div class="col-lg"><p class="title">花枝捲飯</p></div>
             <div class="d-none"><p>85</p><p>3</p></div>
             </div>
             <div class="row justify-content-center">
@@ -110,7 +110,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\4.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>蝦捲飯</h4></div>
+            <div class="col-lg"><p class="title">蝦捲飯</p></div>
             <div class="d-none"><p>85</p><p>4</p></div>
             </div>
             <div class="row justify-content-center">
@@ -121,7 +121,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\5.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>滷排骨飯</h4></div>
+            <div class="col-lg"><p class="title">滷排骨飯</p></div>
             <div class="d-none"><p>80</p><p>5</p></div>
             </div>
             <div class="row justify-content-center">
@@ -132,7 +132,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\6.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>炸雞腿飯</h4></div>
+            <div class="col-lg"><p class="title">炸雞腿飯</p></div>
             <div class="d-none"><p>85</p><p>6</p></div>
             </div>
             <div class="row justify-content-center">
@@ -145,7 +145,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\7.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>鱈魚飯</h4></div>
+            <div class="col-lg"><p class="title">鱈魚飯</p></div>
             <div class="d-none"><p>100</p><p>7</p></div>
             </div>
             <div class="row justify-content-center">
@@ -156,7 +156,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\8.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>炸排骨飯</h4></div>
+            <div class="col-lg"><p class="title">炸排骨飯</p></div>
             <div class="d-none"><p>80</p><p>8</p></div>
             </div>
             <div class="row justify-content-center">
@@ -167,7 +167,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\9.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>香雞排飯</h4></div>
+            <div class="col-lg"><p class="title">香雞排飯</p></div>
             <div class="d-none"><p>85</p><p>9</p></div>
             </div>
             <div class="row justify-content-center">
@@ -180,7 +180,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\10.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>雙捲飯</h4></div>
+            <div class="col-lg"><p class="title">雙捲飯</p></div>
             <div class="d-none"><p>85</p><p>10</p></div>
             </div>
             <div class="row justify-content-center">
@@ -191,7 +191,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\11.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>三寶飯</h4></div>
+            <div class="col-lg"><p class="title">三寶飯</p></div>
             <div class="d-none"><p>85</p><p>11</p></div>
             </div>
             <div class="row justify-content-center">
@@ -202,7 +202,7 @@ $address=$_POST["address"];
           <div class="col-lg">
             <img src="images\12.png" class="img-fluid pic">
             <div class="row">
-            <div class="col-lg"><h4>招牌飯</h4></div>
+            <div class="col-lg"><p  class="title">招牌飯</p></div>
             <div class="d-none"><p>85</p><p>12</p></div>
             </div>
             <div class="row justify-content-center">
@@ -294,7 +294,7 @@ $address=$_POST["address"];
               
         <div id="side1" class="col-lg-3">
           <form action="checklist.php" method="post">
-            <h2>購物車:</h2>
+            <p class="title">購物車:</p class="title">
         <div class="table-responsive" id="Sidebar"></div>
         <div class="col-lg" id="Sidebar1" >
         <button class="btn bg-primary text-white" type="submit" style="display:none;" id="orderButton"  >訂購<span id="bill" class="badge"></span></button>
@@ -324,18 +324,17 @@ $address=$_POST["address"];
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col">
-            <img class="img-fluid" src="images/logo1.png">
+          <div class="col-4">
+            <p>連結</p>
+            <div class="btn-group-vertical">
+              <a href="index.html">關於龍品</a>
+              <a href="product.html">產品介紹</a>
+              <a href="booking.html">線上訂餐</a>
+            </div>
           </div>
           <div class="col">
-            <h5>連結</h5>
-            <a href="index.html">關於龍品</a></br>
-            <a href="product.html">產品介紹</a></br>
-            <a href="booking.html">線上訂餐</a>
-          </div>
-          <div class="col">
-            <h5>聯絡我們</h5>
-            <p>台中市北區北平路二段68之1號<br>tel:(04)-2291-8106</p>
+            <p>聯絡我們</p>
+            <p>台中市北區北平路二段68之1號<br>tel:(04)2291-8106</p>
           </div>
         </div>
       </div>
