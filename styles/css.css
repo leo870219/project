@@ -115,7 +115,7 @@ footer {
   padding-bottom: 2rem;
 }
 #booking-second{
-	padding:6vmin;
+	padding:25vmin 6vmin;
 }
 #booking-second .container {
   background-color: rgb(255, 255, 255);
@@ -270,6 +270,9 @@ width: 100%;
     margin: 6vmin auto;
     line-height: 5vmin;
   }
+  #booking-second{
+    padding:6vmin 6vmin;
+  }
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -288,6 +291,9 @@ width: 100%;
   #history p {
     margin: 7vmin auto;
     line-height: 7vmin;
+  }
+  #booking-second{
+    padding:6vmin 6vmin;
   }
 }
 
@@ -378,6 +384,9 @@ width: 100%;
   #menu-img {
     width: 150px;
     margin: 1em;
+  }
+  #booking-second{
+    padding:6vmin 6vmin;
   }
   #bk-second-menu {
     padding-bottom: 1em;
