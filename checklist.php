@@ -56,7 +56,7 @@ $address=$_POST["address"];
   <section id="ck-second">
     <div class=" container">
     <form action="booksuccessful.php" method="post">
-    <h4 class="col-md-10 text-center">訂購資料及商品確認</h4>
+    <p class="col-md-10 text-center title">訂購資料及商品確認</p>
       <div class="row ">
         <div class="col">
         <p>取餐方式</br><?php echo $takeway?></p>
@@ -144,7 +144,7 @@ echo "</div>"
     </div>
   </form>
   </div>
-</sectiton>
+</section>
 
 <section id="index-latest">
     <footer>
@@ -166,6 +166,7 @@ echo "</div>"
       </div>
     </footer>
   </section>
+
 
 </body>
 </html>
