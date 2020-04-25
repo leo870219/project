@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<section id="intro">
+<header>
 		<nav class="navbar navbar-expand-md navbar-light">
 		  <div class="container-fluid">
 			<a class="navbar-brand" href="index.html">
@@ -96,19 +96,17 @@
 			?>
 		</div>
 	</section>
-
-	<section id="index-latest">
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-4">
+          <nav class="col-4">
             <p>連結</p>
             <div class="btn-group-vertical">
               <a href="index.html">關於龍品</a>
               <a href="product.html">產品介紹</a>
               <a href="booking.html">線上訂餐</a>
             </div>
-          </div>
+          </nav>
           <div class="col">
             <p>聯絡我們</p>
             <p>台中市北區北平路二段68之1號<br>tel:(04)2291-8106</p>
@@ -116,7 +114,6 @@
         </div>
       </div>
     </footer>
-  </section>
 	</div>
 </body>
 
