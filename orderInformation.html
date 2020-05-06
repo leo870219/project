@@ -12,7 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="scripts/1.js"></script>
+	<script src="scripts/orderInformation.js"></script>
 	<script src="https://kit.fontawesome.com/c3595a1670.js" crossorigin="anonymous"></script>
 	<title>線上訂餐</title>
 
@@ -38,7 +38,7 @@
 							<a class="nav-link" href="product.html">產品介紹</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="booking.html">線上訂餐</a>
+							<a class="nav-link" href="orderInformation.html">線上訂餐</a>
 						</li>
 					</ul>
 					<span class="navbar-text">
@@ -60,18 +60,17 @@
 				<label>取餐方式:</label>
 				<div class="form-check-inline ">
 					<label class="form-check-label">
-						<input type="radio" class="form-check-input" onclick="delivery()" name="takeway"
+						<input type="radio" class="form-check-input" id="delivery" name="takeway"
 							value="delivery" required>外送
 					</label>
 					<label class="form-check-label">
-						<input type="radio" class="form-check-input" onclick="takeout()" name="takeway"
+						<input type="radio" class="form-check-input" id="takeout" name="takeway"
 							value="takeout">外帶
 					</label>
 				</div></br>
 				<label>取餐時間:</label>
 				<div class="form-inline">
-					<input type="text" class="form-control col-sm-6 col-12" name="time" required id="datepicker"
-						onchange="OrderTime()">
+					<input type="text" class="form-control col-sm-6 col-12" name="time" required id="datepicker">
 					<select id="ti" name="ti" required class="form-control col-sm-6 col-12"></select>
 				</div>
 				<label for="usr">姓名:</label>
@@ -85,17 +84,16 @@
 				<div id="demo" style="display: none;">
 					<label>外送地址:</label>
 
-					<select class="form-control" name="city" id="city" size=1 placeholder="請選擇外送地址"
-						onclick="chooseCity()">
+					<select class="form-control" name="city" id="city" size=1 placeholder="請選擇外送地址">
 						<option value="" style="display: none">請先選擇縣市</option>
 						<script>
 							for (i = 1; i < dataTree.length; i++)
 								document.writeln("<option value=\"" + dataTree[i].name + "\">" + dataTree[i].name);
 						</script>
 					</select>
-					<select class="form-control" name="area" id="area" size=1 onclick="chooseArea()">
+					<select class="form-control" name="area" id="area" size=1>
 					</select>
-					<select class="form-control" name="road" id="road" size=1 onclick="chooseRoad()">
+					<select class="form-control" name="road" id="road" size=1 >
 					</select>
 					<input class="form-control" type="text" id="address" name="address" placeholder="外送地址">
 					<input type="hidden" name="path">
@@ -114,7 +112,7 @@
 						<div class="btn-group-vertical">
 							<a href="index.html">關於龍品</a>
 							<a href="product.html">產品介紹</a>
-							<a href="booking.html">線上訂餐</a>
+							<a href="orderInformation.html">線上訂餐</a>
 						</div>
 					</nav>
 					<div class="col">

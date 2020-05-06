@@ -1,20 +1,4 @@
-<?php
-$name = $_POST["username"];
-switch($_POST["takeway"]){
-case "delivery":
-$takeway="外送";
-break;
-case "takeout":
-$takeway="外帶";
-break;
-}
-$time = $_POST["time"];
-$ti = $_POST["ti"];
-$path = $_POST["path"];
-$phone = $_POST["usertel"];
-$mail =$_POST["usermail"];
-$address=$_POST["address"];
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +11,7 @@ $address=$_POST["address"];
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src="scripts/1.js"></script>
+<script src="scripts/shoopingCar.js"></script>
 <title>線上訂餐</title>
 
 </head>
@@ -61,7 +45,7 @@ $address=$_POST["address"];
 			</div>
 		  </div>
 		</nav>
-	  </section>
+	  </header>
 
   <section id="bk-second">
     <div class="container-fluid ">
@@ -220,7 +204,7 @@ $address=$_POST["address"];
         <!-- Modal Header -->
         <div class="modal-header">
           <p class="modal-title">您選擇的餐點:<input type="text" size="6"  readonly="readonly" id="selectedMeal" name="selectedMeal"></p>
-          <button type="button" class="close" data-dismiss="modal" onclick="hidePopup()">&times;</button>
+          <button type="button" class="close" data-dismiss="modal" id="closeModal">&times;</button>
         </div>
         
         <!-- Modal body -->
@@ -270,7 +254,7 @@ $address=$_POST["address"];
             <label>數量</label>
             </div>
             <div class="col-lg-6">
-            <select id="amount"  class="form-control" name="amount" size="1"class="font6" onchange="subTotal()"><option value="1">1<option value="2">2<option value="3">3<option value="4">4
+            <select id="amount"  class="form-control" name="amount" size="1"class="font6"><option value="1">1<option value="2">2<option value="3">3<option value="4">4
             <option value="5">5<option value="6">6<option value="7">7<option value="8">8<option value="9">9<option value="10">10</select>
             </div>
             </div>
@@ -284,7 +268,7 @@ $address=$_POST["address"];
             <input type="text" id="picture" class="d-none">
             </div>
             <div class="col-lg-12">
-            <button type="button" class="btn bg-primary text-white" data-dismiss="modal" onclick="ShoppingCart('Sidebar');">加入購物車</button>
+            <button type="button" class="btn bg-primary text-white" data-dismiss="modal" id="addToShoppingCar">加入購物車</button>
             </div> 
             </div>
             </div>
@@ -302,15 +286,15 @@ $address=$_POST["address"];
         </div>
 
         <div id="php" style="display:none">
-        取餐方式:<input type="text" name="takeway" value="<?php echo $takeway?>"></br>
-        取餐日期:<input type="text" name="time" value="<?php echo $time?>"></br>
-        取餐時間:<input type="text" name="ti" value="<?php echo $ti?>"></br>
-        訂購人姓名:<input type="text" name="name" value="<?php echo $name?>"></br>
-        訂購人電話:<input type="text" name="phone" value="<?php echo $phone?>"></br>
-        <input type="text" name="path" value="<?php echo $path?>"></br>
-        訂購人電子郵件:<input type="text" name="mail" value="<?php echo $mail?>"></br>
-        <div  <?php if ($takeway == "外帶") {echo "style=\"display:none\"";}?>">
-        外送餐點地址:<input type="text" name="address" value="<?php echo $path.$address?>"></div>
+        取餐方式:<input type="text" name="takeway" value="外帶"></br>
+        取餐日期:<input type="text" name="time" value="2020-05-08"></br>
+        取餐時間:<input type="text" name="ti" value="09:30"></br>
+        訂購人姓名:<input type="text" name="name" value="阿憲"></br>
+        訂購人電話:<input type="text" name="phone" value="0954-009613"></br>
+        <input type="text" name="path" value=""></br>
+        訂購人電子郵件:<input type="text" name="mail" value="asdzxccxz333@gmail.com"></br>
+        <div  style="display:none"">
+        外送餐點地址:<input type="text" name="address" value=""></div>
         </div>
 
         </form>
@@ -320,17 +304,18 @@ $address=$_POST["address"];
     </div>
   </section>
 
+  <section id="index-latest">
     <footer>
       <div class="container">
         <div class="row">
-          <nav class="col-4">
+          <div class="col-4">
             <p>連結</p>
             <div class="btn-group-vertical">
               <a href="index.html">關於龍品</a>
               <a href="product.html">產品介紹</a>
-              <a href="booking.html">線上訂餐</a>
+              <a href="orderInformation.html">線上訂餐</a>
             </div>
-          </nav>
+          </div>
           <div class="col">
             <p>聯絡我們</p>
             <p>台中市北區北平路二段68之1號<br>tel:(04)2291-8106</p>
@@ -338,7 +323,7 @@ $address=$_POST["address"];
         </div>
       </div>
     </footer>
+  </section>
 
 </body>
 </html>
-

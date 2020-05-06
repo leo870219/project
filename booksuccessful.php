@@ -11,7 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-ajax-downloader@1.1.0/src/ajaxdownloader.min.js"></script>
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-	<script src="scripts/1.js"></script>
+	<script src="scripts/orderInformation.js"></script>
 	<title>線上訂餐</title>
 </head>
 
@@ -44,7 +44,7 @@
 			</div>
 		  </div>
 		</nav>
-	  </section>
+	  </header>
 
 	<section id="bkok-second">
 		<div class="container">
@@ -104,7 +104,7 @@
             <div class="btn-group-vertical">
               <a href="index.html">關於龍品</a>
               <a href="product.html">產品介紹</a>
-              <a href="booking.html">線上訂餐</a>
+              <a href="orderInformation.html">線上訂餐</a>
             </div>
           </nav>
           <div class="col">
